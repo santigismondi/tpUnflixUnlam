@@ -26,7 +26,6 @@ html, body {
 .logo{
     display: flex;
     align-items: center;
-
 }
 .logoUnlam{
     width: 70px;
@@ -82,6 +81,10 @@ html, body {
     color: #ffffff;
     transition-duration: 0.3s;
 }
+
+.iconoNav{
+    display: none;
+}
 .contenedorFooter{
     display: flex;
     justify-content: center;
@@ -94,4 +97,35 @@ html, body {
     background-color: #000000;
     color: #ffffff;
     font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .navegador{
+        background: -webkit-gradient(top, #000 70%,#181818 30%);
+    }
+    .contenedorFooter{
+        display: none;
+    }
+    .iconoNav{
+        display: block;
+    }
+    .logo a{
+        display: none;
+    }
+    .headerList{
+        padding: 0;
+    }
+    .headerList a{
+        display: none;
+    }
+    .headerListItem{
+        margin: 0 25px;
+        font-size: 1.5em;
+    }
+
+    .headerListItem:hover{
+        cursor: pointer;
+        border: none;
+        background-color: black;
+    }
 }
