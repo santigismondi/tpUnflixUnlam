@@ -42,8 +42,22 @@
         </nav>
     </header> 
     <section class="elementosInicio">
-        <section class="categorias"></section>
-        <section class="buscador"></section>
+        <section class="categorias">
+            <label for="listaCategorias" class="labelCategorias">Categorias</label>
+            <select name="categoria" id="listaCategorias" class="selectCategorias">
+                <option value="1">Peliculas</option>
+                <option value="2">Series</option>
+            </select>
+        </section>
+        <section class="buscador">
+            <form action="" class="formularioBuscador">
+                <label for="" class="labelBuscar">Buscar</label>
+                <input type="text" class="inputBuscar" placeholder="Buscar..." id="buscador">
+                <button type="submit" class="botonBuscar">
+                    <span class="iconoBuscar"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </button>
+            </form>
+        </section>
     </section>
     <section class="slider">
 
