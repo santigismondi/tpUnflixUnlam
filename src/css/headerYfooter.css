@@ -89,7 +89,7 @@ html, body {
     display: flex;
     justify-content: center;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     left: 0;
     border: 1px solid #000;
@@ -119,8 +119,8 @@ html, body {
         display: none;
     }
     .headerListItem{
-        margin: 0 25px;
-        font-size: 1.5em;
+        margin-right: 25px;
+        font-size: 1em;
     }
 
     .headerListItem:hover{
