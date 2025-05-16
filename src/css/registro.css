@@ -1,0 +1,75 @@
+
+.container {
+    width: 90%;
+    max-width: 25rem;
+    margin: 7vh auto;
+    padding: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 0.5rem;
+}
+
+
+a {
+    color: inherit;       /* Hereda el color del texto donde esté */
+    text-decoration: none; 
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.titulo{
+    color : #009446;
+    font-size: 4rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.875rem;
+    margin-bottom: 1.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: #009446;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #009446;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #aaa;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
