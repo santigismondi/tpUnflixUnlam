@@ -28,25 +28,74 @@
         </nav>
     </header> 
 
-    <main>
-        <div class="container">
+<main>
+<div class="container">
     <h2>Crea tu cuenta en</h2>
     <h2 class="titulo">UNFLIX</h2>
-    <form action="./registroExitoso.html" method="post">
-        <input type="text" name="nombre" placeholder="Nombre completo" required>
-        <input type="email" name="email" placeholder="Correo electrónico" required>
+    <form action="./registroExitoso.html" method="post" class="registro-form">
+    <div class="form-left">
+        <label>Nombre</label>
+        <input type="text" name="nombre" placeholder="Nombre de usuario" required>
+        <label>Apellido</label>
+        <input type="text" name="apellido" placeholder="Ingrese apellido" required>
+        <label>E-mail</label>
+        <input type="email" name="email" placeholder="Ingrese email" required>
+        <label>Nombre de usuario</label>
+        <input type="text" name="usuario" placeholder="Nombre de usuario" required>
+        <label>Contraseña</label>
         <input type="password" name="password" placeholder="Contraseña" required>
-        <button class="btn" type="button"><a href="./registroExitoso.html">Registrarse</a></button>
+        <label>Repetir contraseña</label>
+        <input type="password" name="repetir_password" placeholder="Repetir contraseña" required>
+    </div>
+
+    <div class="form-right">
+        <p class="medio-pago-title">Método de pago</p>
+
+        <label class="medio-pago-option">
+        <input type="radio" name="pago" value="tarjeta">
+        Tarjeta de crédito
+        </label>
+        <div class="pago-opcion tarjeta">
+        <input type="text" name="numero_tarjeta" placeholder="Número de tarjeta">
+        <input type="text" name="codigo_seguridad" placeholder="XXX">
+        </div>
+
+        <label class="medio-pago-option">
+        <input type="radio" name="pago" value="cupon" >
+        Cupón de pago
+        </label>
+        <div class="pago-opcion cupon">
+        <label><input type="checkbox" name="pago_facil"> Pago fácil</label>
+        <label><input type="checkbox" name="rapipago"> RapiPago</label>
+        </div>
+
+        <label class="medio-pago-option">
+        <input type="radio" name="pago" value="transferencia" >
+        Transferencia bancaria
+        </label>
+        <div class="pago-opcion transferencia">
+        <p class="CBU">CBU: <strong>2183909411100018971375</strong></p>
+        </div>
+    </div>
+
+<div class="botones-form">
+    <button class="btn btn-confirmar" type="submit">Confirmar</button>
+    <button class="btn btn-cancelar" type="button">
+        <a href="../index.html">Cancelar</a>
+    </button>
+</div>
     </form>
     <div class="footer">
-        ¿Ya tienes una cuenta? <a href="../index.html">Inicia sesión</a> 
+    ¿Ya tienes una cuenta? <a href="../index.html">Inicia sesión</a>
     </div>
     </div>
-    </main>
+</main>
 
     
         <footer class="contenedorFooter">
         <p>Santiago Gismondi | Nicolas Gerez | Gonzalo Nasi | Agustin Sequeira</p>
     </footer>
+
+
 </body>
 </html>

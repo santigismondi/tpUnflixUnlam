@@ -1,34 +1,35 @@
-
+/* CONTENEDOR PRINCIPAL */
 .container {
     width: 90%;
-    max-width: 25rem;
+    max-width: 50rem;
     margin: 7vh auto;
     padding: 2.5rem;
     background-color: rgba(0, 0, 0, 0.75);
     border-radius: 0.5rem;
 }
 
-
+/* ESTILO GENERAL DE TEXTOS Y ELEMENTOS */
 a {
-    color: inherit;       /* Hereda el color del texto donde esté */
-    text-decoration: none; 
+    color: inherit;
+    text-decoration: none;
 }
 
-h2{
+h2 {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 1.5rem;
     color: #fff;
 }
 
-.titulo{
-    color : #009446;
+.titulo {
+    color: #009446;
     font-size: 4rem;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+select {
     width: 100%;
     padding: 0.875rem;
     margin-bottom: 1.25rem;
@@ -43,6 +44,12 @@ input::placeholder {
     color: #aaa;
 }
 
+select {
+    background-color: #333;
+    color: #fff;
+}
+
+/* BOTÓN */
 .btn {
     width: 100%;
     padding: 0.875rem;
@@ -55,9 +62,10 @@ input::placeholder {
 }
 
 .btn:hover {
-    background-color: #009446;
+    background-color: #007e3b;
 }
 
+/* FOOTER */
 .footer {
     text-align: center;
     margin-top: 1.5rem;
@@ -72,4 +80,90 @@ input::placeholder {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* FORMULARIO EN DOS COLUMNAS */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.registro-form {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.form-left,
+.form-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+}
+
+/* TÍTULO MEDIO DE PAGO */
+.medio-pago-title {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* OPCIONES DE RADIO VISIBLES */
+.medio-pago-option {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.medio-pago-option input[type="radio"] {
+    margin-right: 0.5rem;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* CAMPOS CONDICIONALES */
+.pago-opcion {
+    display: none;
+    margin-top: 1rem;
+    display: block;
+}
+
+
+label {
+    color: white;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.CBU{
+    color:white;
+}
+
+.botones-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.btn-confirmar {
+    max-width: 40%;
+}
+
+.btn-cancelar {
+    max-width: 40%;
+    background-color: #e74c3c;
+}
+
+.btn-cancelar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
