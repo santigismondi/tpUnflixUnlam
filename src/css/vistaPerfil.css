@@ -1,0 +1,143 @@
+button{
+    font-family: 'Netflix Sans', 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Ubuntu', 'sans-serif';
+    font-size: 1em;
+    font-weight: 300;
+}
+.contenedorPerfil{
+    display: flex;
+    flex-direction: row;
+    padding: 2% 5% 2% 5%;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 300;
+    justify-content: space-evenly;
+}
+.fotoPerfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imagenPerfil{
+    width: 200px;
+    height: 200px;
+}
+.formularioPerfil{
+    display: grid;
+    grid-template-areas:
+        'datos metodoDePago'
+        'botones botones';
+    gap: 10%;
+}
+.datosUsuario{
+    grid-area: 'datos';
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+}
+.labelsUsuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.formularioUsuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.metodoDePago{
+    grid-area: 'metodoDePago';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10%;
+}
+.checkboxPagoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.inputForm{
+    background-color: #181818;
+    border: #009446 solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffffff;
+}
+.inputForm:hover{
+    border: #ffffff solid 1px;
+    transition-duration: 0.3s;
+}
+.inputFormCVV{
+    background-color: #181818;
+    border: #009446 solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 15%;
+    color: #ffffff;
+}
+.inputFormCVV:hover{
+    border: #ffffff solid 1px;
+    transition-duration: 0.3s;
+}
+.botonesFormulario{
+    grid-area: 'botones';
+    display: flex;
+    justify-content: space-around;
+    margin-top:10px;
+}
+
+.botonGuardar{
+    background-color: #009446;
+    border:#ffffff solid 1px;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 0 40px 0 40px;
+    cursor: pointer;
+}
+.botonGuardar:hover{
+    background-color: #ffffff;
+    color:#009446;
+    transition-duration: 0.3s;
+}
+.botonCancelar{
+    background-color: #940000;
+    border:#ffffff solid 1px;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 0 40px 0 40px;
+    cursor: pointer;
+}
+.botonCancelar:hover{
+    background-color: #ffffff;
+    color:#940000;
+    transition-duration: 0.3s;
+}
+.contenedorFooter{
+    position: fixed;
+}
+
+@media (max-width: 768px) {
+    .contenedorPerfil{
+        display: flex;
+        flex-direction: column;
+        padding: 2% 5% 2% 5%;
+        color: #ffffff;
+        font-size: 1.5em;
+        font-weight: 300;
+        justify-content: center;
+        align-items: center;
+    }
+    .imagenPerfil{
+        width: 100px;
+        height: 100px;
+    }
+    .formularioPerfil{
+        display: grid;
+        grid-template-areas:
+            'datos'
+            'metodoDePago'
+            'botones';
+        gap: 5%;
+    }
+}

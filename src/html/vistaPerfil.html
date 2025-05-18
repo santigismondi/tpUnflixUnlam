@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla HTML</title>
+    <title>UNFLIX | Mi Perfil</title>
     <link rel="stylesheet" href="../css/headerYfooter.css">
     <link rel="stylesheet" href="../css/vistaPerfil.css">
-    <link rel="shortcut icon" href="../imagenes/unlam-universidad-nacional-de-la-matanza-seeklogo.png"> 
+    <link rel="shortcut icon" href="../recursos/imagenes/unlam-universidad-nacional-de-la-matanza-seeklogo.png"> 
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -14,7 +14,7 @@
         <nav class="navegador">
             <section class="logo">
                 <img class="logoUnlam" 
-                src="../imagenes/unlam-universidad-nacional-de-la-matanza-seeklogo.png"
+                src="../recursos/imagenes/unlam-universidad-nacional-de-la-matanza-seeklogo.png"
                 alt="Logo de Unlam">
                 <a class="logoDescripcion">UNFLIX</a>  
             </section>
@@ -40,15 +40,59 @@
             <ul class="headerList">
                 <li class="headerListItem">
                     <span class="iconoNav"><i class="fa-solid fa-circle-user"></i></span>
-                    <a class="botonNav" href="">Iniciar Sesion</a>
-                </li>
-                <li class="headerListItemRegistrarse">
-                    <a class="botonNavRegistrarse" href="">Registrarse</a>
+                    <a class="botonNav" href="">Mi Perfil</a>
                 </li>
             </ul>
         </nav>
     </header> 
-    
+    <section class="contenedorPerfil">
+        <section class="fotoPerfil">
+            <a href="" class="cambiarImagen">
+                <img class="imagenPerfil" src="../recursos/imagenes/iconoPerfil.png" alt="fotoPerfi">
+            </a>
+            <p class="nombreDeUsuario">Nombre del Usuario</p>
+        </section>
+        <form action="" class="formularioPerfil">
+            <section class="datosUsuario">
+                <section class="labelsUsuario">
+                    <label class="labelForm">E-mail</label>
+                    <label class="labelForm">Contrasena</label>
+                    <label class="labelForm">Nueva Contrasena</label>
+                    <label class="labelForm">Confirmar</label>
+                </section>
+                <section class="formularioUsuario">
+                    <label class="labelForm">usuario1@gmail.com</label>
+                    <label class="labelForm">********</label>
+                    <input type="password" class="inputForm" placeholder="">
+                    <input type="password" class="inputForm" placeholder="">
+                </section>
+            </section>
+            <section class="metodoDePago">
+                <label for="" class="labelForm">
+                    <input type="radio" class="inputFormPago">Tarjeta de credito
+                    <input type="number" class="inputForm">
+                    <input type="number" class="inputFormCVV" placeholder="CVV">
+                </label>
+                <label for="" class="labelForm">
+                    <input type="radio" class="inputFormPago">Cupon de pago
+                    <section class="checkboxPagoContainer">
+                        <input type="checkbox" class="checkboxPago">Pago Facil
+                        <input type="checkbox" class="checkboxPago">RapiPago
+                    </section>
+                </label>
+                <label for="" class="labelForm">
+                    <input type="radio" class="inputFormPago">Transferencia Bancaria
+                    <p class="CBU">CBU: 0000111166665555</p>
+                </label>
+            </section>
+            <section class="botonesFormulario">
+                <button type="submit" class="botonGuardar">Guardar Cambios</button>                
+            </section>
+            <section class="botonesFormulario">
+                <button type="reset" class="botonCancelar">Cancelar Subscripcion</button>
+            </section>
+        </form>
+    </section>
     <footer class="contenedorFooter">
         <p>Santiago Gismondi | Nicolas Gerez | Gonzalo Nasi | Agustin Sequeira</p>
     </footer>
