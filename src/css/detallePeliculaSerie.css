@@ -73,11 +73,19 @@ html, body {
 .similarMovies a{
     display: flex;
     justify-content: center;
+    width: 80%;
 }
 
 .similarMovies img{
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
+    
+}
+
+.similarMovies img:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
 }
 
 /*Responsive design*/
