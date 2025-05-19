@@ -83,5 +83,16 @@
         display: grid;
         grid-template-columns: 1fr 1fr; 
     }
+    .elementosInicio{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .selectCategorias{
+        width: 100%;
+    }
+    .inputBuscar{
+        width: 100%;
+    }
     
 }
