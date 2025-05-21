@@ -145,4 +145,23 @@ a{
             'botones';
         gap: 5%;
     }
+
+    @media (max-width: 480px) {
+        a{
+            font-size: 1rem;
+        }
+
+        input{
+            font-size: 1rem;
+        }
+
+        .metodoDePago, .formularioPerfil{
+            font-size: 1rem;
+        }
+
+        .inputForm{
+            width: 150px;
+        }
+
+    }
 }
