@@ -116,9 +116,12 @@ html, body {
     .headerList{
         padding: 0;
     }
-    .headerList a{
+    .textoNav{
         display: none;
     }
+    /* .headerList a{
+        display: none;
+    } */
     .headerListItem{
         margin-right: 25px;
         font-size: 1em;
