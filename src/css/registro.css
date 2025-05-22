@@ -49,7 +49,7 @@ select {
     color: #fff;
 }
 
-/* BOTÓN */
+
 .btn {
     width: 100%;
     padding: 0.875rem;
@@ -82,7 +82,7 @@ select {
     text-decoration: underline;
 }
 
-/* FORMULARIO EN DOS COLUMNAS */
+
 .form-wrapper {
     display: flex;
     justify-content: center;
@@ -104,7 +104,7 @@ select {
     min-width: 250px;
 }
 
-/* TÍTULO MEDIO DE PAGO */
+
 .medio-pago-title {
     color: white;
     margin-bottom: 0.5rem;
@@ -112,7 +112,7 @@ select {
     font-size: 1.1rem;
 }
 
-/* OPCIONES DE RADIO VISIBLES */
+
 .medio-pago-option {
     color: white;
     margin-bottom: 0.5rem;
