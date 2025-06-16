@@ -23,20 +23,20 @@
 <div class="container">
     <h2>Crea tu cuenta en</h2>
     <h2 class="titulo">UNFLIX</h2>
-    <form action="./registroExitoso.html" method="get" class="registro-form">
+    <form id="formRegistro" class="registro-form">
     <div class="form-left">
         <label>Nombre</label>
-        <input type="text" name="nombre" placeholder="Nombre de usuario" required>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario" required>
         <label>Apellido</label>
-        <input type="text" name="apellido" placeholder="Ingrese apellido" required>
+        <input type="text" id="apellido" name="apellido" placeholder="Ingrese apellido" required>
         <label>E-mail</label>
-        <input type="email" name="email" placeholder="Ingrese email" required>
+        <input type="email" id="email" name="email" placeholder="Ingrese email" required>
         <label>Nombre de usuario</label>
-        <input type="text" name="usuario" placeholder="Nombre de usuario" required>
+        <input type="text" id="nombreUsuario" name="usuario" placeholder="Nombre de usuario" required>
         <label>Contraseña</label>
-        <input type="password" name="password" placeholder="Contraseña" required>
+        <input type="password" id="contrasena" name="password" placeholder="Contraseña" required>
         <label>Repetir contraseña</label>
-        <input type="password" name="repetir_password" placeholder="Repetir contraseña" required>
+        <input type="password" id="repetir_contrasena" name="repetir_password" placeholder="Repetir contraseña" required>
     </div>
 
     <div class="form-right">
@@ -86,6 +86,7 @@
         <p>Santiago Gismondi | Nicolas Gerez | Gonzalo Nasi | Agustin Sequeira</p>
     </footer>
 
+<script src="../js/registro.js"></script>
 
 </body>
 </html>

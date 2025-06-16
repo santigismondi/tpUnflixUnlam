@@ -40,7 +40,7 @@
             </div>
 
             <div>
-                <form class="formulario" action="./src/html/paginaInicio.html" method="get">
+                <form class="formulario" id="formLogin">
                     <label for="usuario" class="titulosForm">Usuario:</label>
                     <input type="text" id="usuario" name="usuario" required>
 
@@ -48,11 +48,13 @@
                     <input type="password" id="contrasena" name="contrasena" required>
 
 
-                    <button type="submit" class="botonFormRegistrarse titulosForm">Iniciar Sesión</button>
-                    <button type="button" class="botonFormRegistrarse titulosForm"><a href="./src/html/registro.html">Registrarse</a></button>
+                    <button type="submit" id="btnIniciarSesion" class="botonFormRegistrarse titulosForm" disabled>Iniciar Sesión</button>
+                    <button type="button" class="botonFormRegistrarse titulosForm">
+                        <a href="./src/html/registro.html">Registrarse</a>
+                    </button>
                 </form>
+                    <p id="mensajeError"></p>
                     <a href="./src/html/recuperarClave.html">¿Olvidaste tu contraseña?</a>
-                </form>
 
             </div>
         </div>
@@ -61,5 +63,6 @@
     <footer class="contenedorFooter">
         <p>Santiago Gismondi | Nicolas Gerez | Gonzalo Nasi | Agustin Sequeira</p>
     </footer>
+    <script src="./src/js/index.js"></script>
 </body>
 </html>

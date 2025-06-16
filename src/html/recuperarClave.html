@@ -17,7 +17,7 @@
                 alt="Logo de Unlam">
                 <a class="logoDescripcion" href="/index.html">UNFLIX</a>  
             </section>
-     
+    
 
             <ul class="headerList">
                 <li class="headerListItem">
@@ -35,21 +35,23 @@
                 <h2 class="titulo">UNFLIX</h2>
                 <h2>Recuperar contraseña</h2>
                 
-                <form action="/index.html" method="get">
-                    <input type="email" name="email" placeholder="Correo electrónico" required>
-                    <input type="password" name="password" placeholder="Contraseña" required>
+                <form id="formRecuperar">
+                    <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
                     
                     <div class="recovery-buttons">
-                        <a href="../../index.html"><input type="submit" value="Confirmar" class="send-pass"></a>
+                        <input type="submit" value="Confirmar" id="btnConfirmar" class="send-pass" disabled>
                     </div>
                 </form>
-                 <a href="../../index.html"><button class="cancelar">Cancelar</button></a>
+                <a href="../../index.html"><button class="cancelar">Cancelar</button></a>
+                <p id="mensajeError"></p>
             </div>
         </main>
 
         <footer class="contenedorFooter">
         <p>Santiago Gismondi | Nicolas Gerez | Gonzalo Nasi | Agustin Sequeira</p>
         </footer>
-    
+
+    <script src="../js/recuperarClave.js"></script>
 </body>
 </html>

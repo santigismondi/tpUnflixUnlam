@@ -55,8 +55,8 @@ h2{
     background-color: #d67a74;
     border: none;
     border-radius: 0.25rem;
-       font-size: 1.125rem;
-           cursor: pointer;
+    font-size: 1.125rem;
+    cursor: pointer;
     color: white;
     justify-content: center;
     margin-top: 1rem;
@@ -64,4 +64,8 @@ h2{
 
 .cancelar:hover{
     background-color: #ec8881;
+}
+
+#mensajeError {
+    color: red;
 }
