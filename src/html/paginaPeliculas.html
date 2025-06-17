@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNFLIX | Inicio</title>
+    <title>UNFLIX | Peliculas</title>
     <link rel="stylesheet" href="../css/headerYfooter.css">
     <link rel="stylesheet" href="../css/paginaInicio.css">
+    <link rel="stylesheet" href="../css/paginaPeliculasSeries.css">
     <link rel="shortcut icon" href="../recursos/imagenes/unlam-universidad-nacional-de-la-matanza-seeklogo.png"> 
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
 </head>
@@ -49,26 +50,10 @@
             </ul>
         </nav>
     </header> 
-    <section class="elementosInicio">
-        <section class="categorias">
-            <label for="listaCategorias" class="labelCategorias">Categorias</label>
-            <select name="categoria" id="listaCategorias" class="selectCategorias">
-                <option value=""></option>
-                <option class="opcionesCategoria" value="1">Peliculas</option>
-                <option class="opcionesCategoria" value="2">Series</option>
-            </select>
-        </section>
-        <section class="buscador">
-            <form action="" class="formularioBuscador">
-                <label for="" class="labelBuscar">Buscar</label>
-                <input type="text" class="inputBuscar" placeholder="" id="buscador">
-            </form>
-        </section>
+    <section class="contenedorTitulo">
+        <h1 class="tituloPelicula">Peliculas</h1>
     </section>
-    <section class="slider">
-        <img src="../recursos/imagenes/slider/starWarsSlider.webp" alt="" class="imagenSlider">
-    </section>
-    <section class="grillaInicio">
+    <section class="grillaInicioPeliculas">
         <section class="boxContenido" data-tipo="pelicula">
             <p id="nombrePeliSerie" name="pelicula" class="parrafoNombrePeliSerie">El Ultimo Gran Heroe</p>
             <a class="etiquetaVinculoGrilla" href="../html/detallePelicula.html">
@@ -117,50 +102,8 @@
                 <img src="../recursos/imagenes/portadasSeries/laGranFinal.webp" alt="bolt" class="portada">
             </a>
         </section>
-        <section class="boxContenido" data-tipo="serie">
-            <p id="nombrePeliSerie" name="serie" class="parrafoNombrePeliSerie">Loki</p>
-            <a class="etiquetaVinculoGrilla" href="../html/detalleSerie.html">
-                <img src="../recursos/imagenes/portadasSeries/loki.webp" alt="bolt" class="portada">
-            </a>
-        </section>
-        <section class="boxContenido" data-tipo="serie">
-            <p id="nombrePeliSerie" name="serie" class="parrafoNombrePeliSerie">WandaVision</p>
-            <a class="etiquetaVinculoGrilla" href="../html/detalleSerie.html">
-                <img src="../recursos/imagenes/portadasSeries/wandaVision.webp" alt="bolt" class="portada">
-            </a>
-        </section>
-        <section class="boxContenido" data-tipo="serie">
-            <p id="nombrePeliSerie" name="serie" class="parrafoNombrePeliSerie">Bienvenidos al Wrexham</p>
-            <a class="etiquetaVinculoGrilla" href="../html/detalleSerie.html">
-                <img src="../recursos/imagenes/portadasSeries/wrexham.webp" alt="bolt" class="portada">
-            </a>
-        </section>
-        <section class="boxContenido" data-tipo="serie">
-            <p id="nombrePeliSerie" name="serie" class="parrafoNombrePeliSerie">Campeones un Anio Despues</p>
-            <a class="etiquetaVinculoGrilla" href="../html/detalleSerie.html">
-                <img src="../recursos/imagenes/portadasSeries/campeones.webp" alt="bolt" class="portada">
-            </a>
-        </section>
-        <section class="boxContenido" data-tipo="serie">
-            <p id="nombrePeliSerie" name="serie" class="parrafoNombrePeliSerie">DareDevil</p>
-            <a class="etiquetaVinculoGrilla" href="../html/detalleSerie.html">
-                <img src="../recursos/imagenes/portadasSeries/daredevil.webp" alt="bolt" class="portada">
-            </a>
-        </section>
-        <section class="boxContenido" data-tipo="serie">
-            <p id="nombrePeliSerie" name="serie" class="parrafoNombrePeliSerie">Mas Alla de Diego</p>
-            <a class="etiquetaVinculoGrilla" href="../html/detalleSerie.html">
-                <img src="../recursos/imagenes/portadasSeries/diego.webp" alt="bolt" class="portada">
-            </a>
-        </section>
-        <section class="boxContenido" data-tipo="serie">
-            <p id="nombrePeliSerie" name="serie" class="parrafoNombrePeliSerie">Kun Aguero</p>
-            <a class="etiquetaVinculoGrilla" href="../html/detalleSerie.html">
-                <img src="../recursos/imagenes/portadasSeries/kun.webp" alt="bolt" class="portada">
-            </a>
-        </section>
     </section>
-    <script src="../js/paginaInicio.js"></script>
+
     <footer class="contenedorFooter">
         <p>Santiago Gismondi | Nicolas Gerez | Gonzalo Nasi | Agustin Sequeira</p>
     </footer>

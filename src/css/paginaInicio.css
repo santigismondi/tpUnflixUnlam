@@ -57,6 +57,9 @@
 .boxContenido{
     display: flex;
 }
+.boxContenido p{
+    display: none;
+}
 .boxContenido:hover{
     display: flex;
     transform: scale(1.05);

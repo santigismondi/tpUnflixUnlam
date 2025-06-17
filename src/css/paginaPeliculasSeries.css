@@ -1,0 +1,48 @@
+.grillaInicioPeliculas, .grillaInicioSeries {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ; 
+    grid-template-rows: 1fr 1fr ;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0% 3% 3% 3%;
+}
+
+.contenedorTitulo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0% 3% 0% 3%;
+}
+.tituloPelicula, .tituloSerie {
+    font-weight: 400;
+    font-size: 3em;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 1080px) {
+    .grillaInicioPeliculas, .grillaInicioSeries{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    .tituloPelicula, .tituloSerie {
+    font-size: 2em;
+    color: #fff;
+}
+}
+@media (max-width: 768px) {
+    .grillaInicioPeliculas, .grillaInicioSeries{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
+    .contenedorTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 3% 0% 3%;
+}
+    .tituloPelicula, .tituloSerie {
+    font-size: 2em;
+    color: #fff;
+}
+}
