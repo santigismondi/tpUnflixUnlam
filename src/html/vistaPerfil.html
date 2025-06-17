@@ -48,7 +48,8 @@
                 </li>
             </ul>
         </nav>
-    </header> 
+    </header>
+    <script src="../js/registro.js"></script> 
     <section class="contenedorPerfil">
         <section class="fotoPerfil">
             <a href="" class="cambiarImagen">
@@ -73,19 +74,19 @@
             </section>
             <section class="metodoDePago">
                 <label for="" class="labelForm">
-                    <input type="radio" class="inputFormPago">Tarjeta de credito
-                    <input type="number" class="inputForm">
-                    <input type="number" class="inputFormCVV" placeholder="CVV">
+                    <input name="pago" type="radio" class="inputFormPago">Tarjeta de credito
+                    <input name="pagoTarjeta" type="number" class="inputForm">
+                    <input name="pagoTarjeta" type="number" class="inputFormCVV" placeholder="CVV">
                 </label>
                 <label for="" class="labelForm">
-                    <input type="radio" class="inputFormPago">Cupon de pago
+                    <input name="pago" type="radio" class="inputFormPago">Cupon de pago
                     <section class="checkboxPagoContainer">
-                        <input type="checkbox" class="checkboxPago">Pago Facil
-                        <input type="checkbox" class="checkboxPago">RapiPago
+                        <input name="pagoCupon" type="checkbox" class="checkboxPago">Pago Facil
+                        <input name="pagoCupon" type="checkbox" class="checkboxPago">RapiPago
                     </section>
                 </label>
                 <label for="" class="labelForm">
-                    <input type="radio" class="inputFormPago">Transferencia Bancaria
+                    <input name="pago" type="radio" class="inputFormPago">Transferencia Bancaria
                     <p class="CBU">CBU: 0000111166665555</p>
                 </label>
             </section>
