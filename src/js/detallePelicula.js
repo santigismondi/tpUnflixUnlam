@@ -8,3 +8,20 @@ if(!peliculasJSON){
 }
 
 console.log(JSON.stringify(peliculas));
+
+const url = new URL(window.location.href);
+const tituloPelicula = url.searchParams.get("titulo");
+
+document.getElementById("titulo-pelicula").textContent = tituloPelicula;
+
+const pelicula = peliculas.find(p => p.titulo === tituloPelicula);
+console.log(pelicula);
+
+class detallePelicula{
+    generarVista(peliculas){
+        for(let pelicula of peliculas){
+            document.getElementById("duracion-pelicula").textContent = pelicula.duracion;
+            document.getElementById("genero-pelicula").textContent = pelicula.genero;
+        }
+    }
+}
