@@ -6,6 +6,7 @@ if(!peliculasJSON){
 }else{
     peliculas = JSON.parse(peliculasJSON)
 }
+const longitudVectorDatosPeliculas = peliculas.length;
 
 console.log(JSON.stringify(peliculas));
 
@@ -23,8 +24,7 @@ class detallePelicula{
             document.getElementById("genero-pelicula").textContent = pelicula.genero;
             document.getElementById("actores-pelicula").textContent = pelicula.actores;
             document.getElementById("descripcion-pelicula").textContent = pelicula.descripcion;
-            document.querySelector(".infoContent").innerHTML = pelicula.iframe;
-        
+            document.querySelector(".infoContent").innerHTML = pelicula.iframe;        
     }
 }
 
