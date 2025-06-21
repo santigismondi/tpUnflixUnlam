@@ -32,9 +32,10 @@ const PELICULAS = [
     "genero": "Acción, Ciencia Ficción, Thriller",
     "actores": ["Chris Evans", "Scarlett Johansson", "Sebastian Stan"],
     "descripcion": "Steve Rogers se une a Black Widow para descubrir una conspiración oscura, enfrentándose a un nuevo y formidable enemigo: el Soldado de Invierno.",
-    "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/Zk1ELX5r5s0" 
-                title="Winter Soldier Trailer" frameborder="0" allowfullscreen></iframe>
-                <a href="https://www.youtube.com/watch?v=Zk1ELX5r5s0" target="_blank">
+    "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/GpP3kd1a0Yk?si=jxT5r1ZG6pk79_oe" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <a href="https://www.youtube.com/watch?v=GpP3kd1a0Yk&ab_channel=MarvelLatinoam%C3%A9ricaOficial" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
                 </a>`
 },
@@ -58,9 +59,10 @@ const PELICULAS = [
     "genero": "Animación, Aventura, Comedia",
     "actores": ["Owen Wilson", "Paul Newman", "Bonnie Hunt"],
     "descripcion": "Un coche de carreras novato aprende lecciones de vida en un pequeño pueblo olvidado mientras busca su camino hacia la victoria.",
-    "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/SRXgG5B8fpg" 
-                title="Cars Trailer" frameborder="0" allowfullscreen></iframe>
-                <a href="https://www.youtube.com/watch?v=SRXgG5B8fpg" target="_blank">
+    "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/W_H7_tDHFE8?si=DpCMzHWOTxPsaCaD" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <a href="https://www.youtube.com/watch?v=W_H7_tDHFE8&ab_channel=RottenTomatoesClassicTrailers" target="_blank">
                     <input type="button" value="Comenzar" class="infoButton">
                 </a>`
 },
@@ -99,10 +101,10 @@ const PELICULAS = [
     "genero": "Documental, Deporte",
     "actores": ["Lionel Messi", "Diego Maradona", "Periodistas deportivos (imaginarios)"],
     "descripcion": "Un documental que explora los momentos clave y la emoción que rodeó la final de la Copa Mundial 2022 para Argentina.",
-    "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/watch?v=bERxUcV5UbA" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <a href="https://www.youtube.com/watch?v=bERxUcV5UbA" target="_blank">
+    "iframe":`<iframe width="560" height="315" src="https://www.youtube.com/embed/FA1sR2SZAlY?si=hqkJRTNK3l600SkI" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=FA1sR2SZAlY&ab_channel=CONMEBOL" target="_blank">
         <input type="button" value="Comenzar" class="infoButton">
         </a>`  
 }

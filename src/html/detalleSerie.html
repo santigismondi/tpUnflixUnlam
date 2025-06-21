@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/headerYfooter.css">
     <link rel="stylesheet" href="../css/detallePeliculaSerie.css">
-    <link rel="shortcut icon" href="../recursos/imagenes/unlam-universidad-nacional-de-la-matanza-seeklogo.png"> 
+    <link rel="shortcut icon" href="../recursos/imagenes/unlam-universidad-nacional-de-la-matanza-seeklogo.png">
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
     <title>Series</title>
 </head>
 
 <body>
-        <header>
+    <header>
         <nav class="navegador">
             <section class="logo">
-                <img class="logoUnlam" 
-                src="../recursos/imagenes/unlam-universidad-nacional-de-la-matanza-seeklogo.png"
-                alt="Logo de Unlam">
-                <a class="logoDescripcion" href="../html/paginaInicio.html">UNFLIX</a>  
+                <img class="logoUnlam" src="../recursos/imagenes/unlam-universidad-nacional-de-la-matanza-seeklogo.png"
+                    alt="Logo de Unlam">
+                <a class="logoDescripcion" href="../html/paginaInicio.html">UNFLIX</a>
             </section>
-     
+
             <ul class="headerList">
-                <li class="headerListItem">                    
+                <li class="headerListItem">
                     <a class="botonNav" href="../html/paginaInicio.html">
                         <span class="iconoNav"><i class="fa-solid fa-house"></i></span>
                         <span class="textoNav">Inicio</span>
@@ -43,6 +42,12 @@
             </ul>
             <ul class="headerList">
                 <li class="headerListItem">
+                    <a class="botonNav" href="../html/favoritos.html">
+                        <span class="iconoNav"><i class="fa-solid fa-heart-circle-check"></i></span>
+                        <span class="textoNav">Favoritos</span>
+                    </a>
+                </li>
+                <li class="headerListItem">
                     <a class="botonNav" href="../html/vistaPerfil.html">
                         <span class="iconoNav"><i class="fa-solid fa-circle-user"></i></span>
                         <span class="textoNav">Mi Perfil</span>
@@ -50,22 +55,17 @@
                 </li>
             </ul>
         </nav>
-    </header> 
+    </header>
     <main>
         <section class="info">
             <div class="infoContent">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/KcBStos46EM?si=d9TMK5RWbL2xbDaR"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <a href="https://www.youtube.com/watch?v=nW948Va-l10" target="_blank"><input type="button"
-                        value="Comenzar" class="infoButton"></a>
+                
 
             </div>
 
             <div class="infoDescription">
                 <div>
-                    <strong>Titulo: </strong><span>Loki</span>
+                    <strong>Titulo: </strong><span id="titulo-serie"></span>
                 </div>
                 <div>
                     <strong>Temporadas: </strong><span><select name="temporadas" id="temporadas">
@@ -84,19 +84,15 @@
                     </span>
                 </div>
                 <div>
-                    <strong>Genero: </strong><span> Acción</span>
+                    <strong>Genero: </strong><span id="genero-serie"></span>
                 </div>
                 <div>
                     <strong>Actores: </strong><a href="https://es.wikipedia.org/wiki/Tom_Hiddleston"
-                        target="_blank"><span>Tom Hiddleston</span></a>
+                        target="_blank"><span id="actores-serie"></span></a>
                 </div>
 
 
-                <p>
-                    Después de robar el Teseracto, Loki termina en manos de la TVA, una agencia que controla el tiempo.
-                    Para no ser borrado de la existencia, se une a una misión caótica llena de saltos temporales,
-                    versiones alternativas y secretos que pueden cambiar todo el multiverso.
-                </p>
+                <p id="descripcion-serie"></p>
             </div>
         </section>
 
@@ -104,13 +100,13 @@
             <h2>Similares</h2>
             <section class="similarMovies">
 
-                <a href="../html/detalleSerie.html"><img src="../recursos/imagenes/portadasSeries/wandaVision.webp"
+                <a href="../html/detalleSerie.html?titulo=WandaVision"><img src="../recursos/imagenes/portadasSeries/wandaVision.webp"
                         alt=""></a>
-                <a href="../html/detalleSerie.html"><img src="../recursos/imagenes/portadasSeries/daredevil.webp"
+                <a href="../html/detalleSerie.html?titulo=DareDevil"><img src="../recursos/imagenes/portadasSeries/daredevil.webp"
                         alt=""></a>
-                <a href="../html/detalleSerie.html"><img src="../recursos/imagenes/portadasSeries/wrexham.webp"
+                <a href="../html/detalleSerie.html?titulo=Bienvenidos al Wrexham"><img src="../recursos/imagenes/portadasSeries/wrexham.webp"
                         alt=""></a>
-                <a href="../html/detalleSerie.html"><img src="../recursos/imagenes/portadasSeries/diego.webp"
+                <a href="../html/detalleSerie.html?titulo=Mas Alla de Diego"><img src="../recursos/imagenes/portadasSeries/diego.webp"
                         alt=""></a>
 
             </section>
@@ -122,6 +118,8 @@
     <footer class="contenedorFooter">
         <p>Santiago Gismondi | Nicolas Gerez | Gonzalo Nasi | Agustin Sequeira</p>
     </footer>
+    <script src="../json-data/series.js"></script>
+    <script src="../js/detalleSerie.js"></script>
 </body>
 
 </html>
