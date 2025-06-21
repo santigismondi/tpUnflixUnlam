@@ -101,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 esValido = false;
             }
         }
+        const cuponSeleccionado = document.querySelector('input[name="pago"][value="cupon"]').checked;
+        const transferenciaSeleccionada = document.querySelector('input[name="pago"][value="transferencia"]').checked;
 
         botonConfirmar.disabled = !esValido;
         return esValido;
@@ -120,7 +122,21 @@ document.addEventListener('DOMContentLoaded', () => {
             apellido: apellidoInput.value.trim(),
             email: emailInput.value.trim()
         };
+        
+        const tarjetaSeleccionada = document.querySelector('input[name="pago"][value="tarjeta"]').checked;
+        const cuponSeleccionado = document.querySelector('input[name="pago"][value="cupon"]').checked;
+        const transferenciaSeleccionada = document.querySelector('input[name="pago"][value="transferencia"]').checked;
 
+        if(tarjetaSeleccionada){            
+            nuevoUsuario.tipoPago = 'tarjeta';
+            nuevoUsuario.numeroTarjeta = numeroTarjetaInput.value.trim();
+            nuevoUsuario.codigoSeguridad = codigoSeguridadInput.value.trim();
+        }else if(cuponSeleccionado){
+            nuevoUsuario.tipoPago = 'cupon';
+        }else if(transferenciaSeleccionada){
+            nuevoUsuario.tipoPago = 'transferencia';
+        }
+        
         const usuariosGuardados = JSON.parse(localStorage.getItem('usuarios')) || [];
 
         const yaExiste = usuariosGuardados.some(user => user.nombreUsuario === nuevoUsuario.nombreUsuario);

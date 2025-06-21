@@ -3,6 +3,18 @@ button{
     font-size: 1em;
     font-weight: 300;
 }
+.contenedorTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 3% 0% 3%;
+}
+.tituloPerfil {
+    font-weight: 400;
+    font-size: 3em;
+    color: #fff;
+    text-align: center;
+}
 .contenedorPerfil{
     display: flex;
     flex-direction: row;
@@ -96,8 +108,7 @@ button{
     cursor: pointer;
 }
 .botonGuardar:hover{
-    background-color: #ffffff;
-    color:#009446;
+    background-color: #00421f;
     transition-duration: 0.3s;
 }
 .botonCancelar{
@@ -109,9 +120,15 @@ button{
     cursor: pointer;
 }
 .botonCancelar:hover{
-    background-color: #ffffff;
-    color:#940000;
+    background-color: #480000;
     transition-duration: 0.3s;
+}
+.mesajeError{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 3% 0% 3%;
+    font-size: 1.1em;
 }
 .contenedorFooter{
     position: fixed;
@@ -145,23 +162,32 @@ a{
             'botones';
         gap: 5%;
     }
-
-    @media (max-width: 480px) {
-        a{
-            font-size: 1rem;
-        }
-
-        input{
-            font-size: 1rem;
-        }
-
-        .metodoDePago, .formularioPerfil{
-            font-size: 1rem;
-        }
-
-        .inputForm{
-            width: 150px;
-        }
-
+    .contenedorTitulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0% 3% 0% 3%;
     }
+    .tituloPerfil {
+        font-size: 2em;
+        color: #fff;
+    }
+}
+@media (max-width: 480px) {
+    a{
+        font-size: 1rem;
+    }
+
+    input{
+        font-size: 1rem;
+    }
+
+    .metodoDePago, .formularioPerfil{
+        font-size: 1rem;
+    }
+
+    .inputForm{
+        width: 150px;
+    }
+
 }

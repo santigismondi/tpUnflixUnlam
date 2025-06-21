@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-        <header>
+    <header>
         <nav class="navegador">
             <section class="logo">
                 <img class="logoUnlam" 
@@ -41,63 +41,65 @@
             </ul>
             <ul class="headerList">
                 <li class="headerListItem">
-                    <a class="botonNav" href="../html/vistaPerfil.html">
-                        <span class="iconoNav"><i class="fa-solid fa-circle-user"></i></span>
-                        <span class="textoNav">Mi Perfil</span>
+                    <a class="botonNav" href="../../index.html">
+                        <span class="iconoNav"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        <span class="textoNav">Cerrar Sesion</span>
                     </a>
                 </li>
             </ul>
         </nav>
     </header> 
-    <script src="../js/registro.js"></script> 
+       <section class="contenedorTitulo">
+        <h1 class="tituloPerfil">Mi Perfil</h1>
+    </section>
     <section class="contenedorPerfil">
         <section class="fotoPerfil">
-            <a href="" class="cambiarImagen">
-                <img class="imagenPerfil" src="../recursos/imagenes/iconoPerfil.png" alt="fotoPerfi">
-            </a>
-            <p class="nombreDeUsuario">Nombre del Usuario</p>
+            <img class="imagenPerfil" src="../recursos/imagenes/iconoPerfil.png" alt="fotoPerfi">
+            <p id="idLabelNombreUsuario" class="nombreDeUsuario">Nombre del Usuario</p>
         </section>
         <form action="" class="formularioPerfil">
             <section class="datosUsuario">
                 <section class="labelsUsuario">
-                    <label class="labelForm">E-mail</label>
-                    <label class="labelForm">Contrasena</label>
-                    <label class="labelForm">Nueva Contrasena</label>
-                    <label class="labelForm">Confirmar</label>
+                    <label id="idLabelMail" class="labelForm">E-mail</label>
+                    <label id="idLabelContra" class="labelForm">Contraseña</label>
+                    <label id="idLabelNewContra" class="labelForm">Nueva Contraseña</label>
+                    <label id="idLabelConfirmContra" class="labelForm">Confirmar</label>
                 </section>
                 <section class="formularioUsuario">
-                    <label class="labelForm">usuario1@gmail.com</label>
-                    <label class="labelForm">********</label>
-                    <input type="password" class="inputForm" placeholder="">
-                    <input type="password" class="inputForm" placeholder="">
+                    <label id="idEmailUser" class="labelForm">usuario1@gmail.com</label>
+                    <label id="idContraUser" class="labelForm">********</label>
+                    <input id="idFormNewContra" type="password" class="inputForm" placeholder="">
+                    <input id="idFormConfirmContra" type="password" class="inputForm" placeholder="">
                 </section>
             </section>
             <section class="metodoDePago">
                 <label for="" class="labelForm">
-                    <input name="pago" type="radio" class="inputFormPago">Tarjeta de credito
-                    <input name="pagoTarjeta" type="number" class="inputForm">
+                    <input name="pago" type="radio" class="inputFormPago" value="tarjeta">Tarjeta de credito
+                    <input name="pagoTarjeta" type="number" class="inputForm" placeholder="XXXX XXXX XXXX XXXX">
                     <input name="pagoTarjeta" type="number" class="inputFormCVV" placeholder="CVV">
                 </label>
                 <label for="" class="labelForm">
-                    <input name="pago" type="radio" class="inputFormPago">Cupon de pago
+                    <input name="pago" type="radio" class="inputFormPago" value="cupon">Cupon de pago
                     <section class="checkboxPagoContainer">
                         <input name="pagoCupon" type="checkbox" class="checkboxPago">Pago Facil
                         <input name="pagoCupon" type="checkbox" class="checkboxPago">RapiPago
                     </section>
                 </label>
                 <label for="" class="labelForm">
-                    <input name="pago" type="radio" class="inputFormPago">Transferencia Bancaria
+                    <input name="pago" type="radio" class="inputFormPago" value="transferencia">Transferencia Bancaria
                     <p class="CBU">CBU: 0000111166665555</p>
                 </label>
             </section>
             <section class="botonesFormulario">
-                <button type="submit" class="botonGuardar"><a  href="../html/paginaInicio.html">Guardar cambios</a></button>                
+                <button type="submit" class="botonGuardar" id="btnGuardarCambios"><a class="linkGuardar" href="../html/paginaInicio.html">Guardar cambios</a></button>                
             </section>
             <section class="botonesFormulario">
-                <button type="reset" class="botonCancelar"><a  href="../../index.html">Cancelar Subscripción</a></button>
+                <button type="reset" class="botonCancelar" id="btnCancelarSuscripcion"><a class="linkCancelar" href="../../index.html">Cancelar Subscripción</a></button>
             </section>
         </form>
     </section>
+    <section id="error" class="mesajeError"></section>
+    <script src="../js/vistaPerfil.js"></script>
     <footer class="contenedorFooter">
         <p>Santiago Gismondi | Nicolas Gerez | Gonzalo Nasi | Agustin Sequeira</p>
     </footer>
