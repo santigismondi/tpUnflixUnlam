@@ -4,7 +4,7 @@ const PELICULAS = [
     "titulo": "El Ultimo Gran Heroe",
     "duracion": "2h 10m",
     "genero": "Acción, Aventura, Fantasía",
-    "actores": ["Arnold Schwarzenegger", "Charles Dance", "Austin O'Brien"],
+    "actores": ["Arnold Schwarzenegger"],
     "descripcion": "Un joven aficionado al cine es mágicamente transportado a una película de acción, donde se une a su héroe en una emocionante aventura.",
     "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/ShBw43KJoLk" 
                 title="Last Action Hero Trailer" frameborder="0" allowfullscreen></iframe>
