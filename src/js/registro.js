@@ -2,11 +2,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.getElementById('formRegistro');
     const botonConfirmar = document.querySelector('.btn-confirmar');
 
+    function esSoloLetras(texto) {
+    const letrasValidas = "abcdefghijklmnopqrstuvwxyzáéíóúñ ";
+    texto = texto.toLowerCase();
+    for (let i = 0; i < texto.length; i++) {
+        if (!letrasValidas.includes(texto[i])) {
+            return false;
+        }
+    }
+    return texto.length > 0;
+}
+
+function esLetrasYNumeros(texto) {
+    for (let i = 0; i < texto.length; i++) {
+        const c = texto[i];
+        if (!(c >= 'a' && c <= 'z') && 
+            !(c >= 'A' && c <= 'Z') && 
+            !(c >= '0' && c <= '9')) {
+            return false;
+        }
+    }
+    return texto.length > 0;
+}
+
+function esContrasenaValida(pass) {
+    if (pass.length < 8) return false;
+
+    let letras = 0;
+    let numeros = 0;
+    let simbolos = 0;
+    const simbolosValidos = "!@#$%^&*()_+={}[]:;\"'<>,.?~\\/-";
+
+    for (let i = 0; i < pass.length; i++) {
+        const c = pass[i];
+        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) letras++;
+        else if (c >= '0' && c <= '9') numeros++;
+        else if (simbolosValidos.includes(c)) simbolos++;
+    }
+
+    return letras >= 2 && numeros >= 2 && simbolos >= 2;
+}
+
     // Validadores Regulares
-    const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+$/;
-    const letrasYNumeros = /^[A-Za-z0-9]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const contraseñaRegex = /^(?=(?:.*[A-Za-z]){2,})(?=(?:.*\d){2,})(?=(?:.*[!@#$%^&*()_+={}\[\]:;"'<>,.?~\\/-]){2,}).{8,}$/;
 
     const nombreInput = document.getElementById('nombre');
     const apellidoInput = document.getElementById('apellido');
@@ -40,13 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let esValido = true;
 
         limpiarError(nombreInput);
-        if (!soloLetras.test(nombreInput.value.trim())) {
+        if (!esSoloLetras(nombreInput.value.trim())) {
             mostrarError(nombreInput, 'Solo se permiten letras');
             esValido = false;
         }
 
         limpiarError(apellidoInput);
-        if (!soloLetras.test(apellidoInput.value.trim())) {
+        if (!esSoloLetras(apellidoInput.value.trim())) {
             mostrarError(apellidoInput, 'Solo se permiten letras');
             esValido = false;
         }
@@ -58,13 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         limpiarError(nombreUsuarioInput);
-        if (!letrasYNumeros.test(nombreUsuarioInput.value.trim())) {
+        if (!esLetrasYNumeros(nombreUsuarioInput.value.trim())) {
             mostrarError(nombreUsuarioInput, 'Solo letras y números');
             esValido = false;
         }
 
         limpiarError(contrasenaInput);
-        if (!contraseñaRegex.test(contrasenaInput.value.trim())) {
+        if (!esContrasenaValida(contrasenaInput.value.trim())) {
             mostrarError(contrasenaInput, 'Debe tener mínimo 8 caracteres, 2 letras, 2 números y 2 símbolos');
             esValido = false;
         }
