@@ -126,10 +126,23 @@ function esContrasenaValida(pass) {
                 const suma = digitos.slice(0, -1).reduce((a, b) => a + b, 0);
                 const ultimo = digitos[15];
 
-                if ((suma % 2 === 0 && ultimo % 2 === 0) || (suma % 2 === 1 && ultimo % 2 === 1)) {
-                    mostrarError(numeroTarjetaInput, 'El último dígito debe ser par si la suma es impar, e impar si la suma es par');
-                    esValido = false;
+                            function esPar(n) {
+                if (n === 0 || n === 2 || n === 4 || n === 6 || n === 8) {
+                    return true;
+                } else {
+                    return false;
                 }
+            }
+            
+            const sumaUltimoDigito = Number(String(suma).slice(-1));
+            const sumaEsPar = esPar(sumaUltimoDigito);
+            const ultimoEsPar = esPar(ultimo);
+            
+            if ((sumaEsPar && ultimoEsPar) || (!sumaEsPar && !ultimoEsPar)) {
+                mostrarError(numeroTarjetaInput, 'El último dígito debe ser par si la suma es impar, e impar si la suma es par');
+                esValido = false;
+            }
+            
             }
 
             limpiarError(codigoSeguridadInput);
