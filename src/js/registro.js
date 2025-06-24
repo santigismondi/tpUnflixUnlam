@@ -43,7 +43,7 @@ function esContrasenaValida(pass) {
     return letras >= 2 && numeros >= 2 && simbolos >= 2;
 }
 
-    // Validadores Regulares
+    // validador regular email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const nombreInput = document.getElementById('nombre');
