@@ -23,7 +23,9 @@ const SERIES = [{
   "temporadas": 1,
   "episodios": [9],
   "genero": "Ciencia Ficción, Fantasía, Comedia",
-  "actores": [{"nombre": "Elizabeth Olsen","wiki": "https://es.wikipedia.org/wiki/Elizabeth_Olsen"},{"nombre":"Paul Bettany", "wiki":"https://es.wikipedia.org/wiki/Paul_Bettany"} ],
+  "actores": [
+    { "nombre": "Elizabeth Olsen", "wiki": "https://es.wikipedia.org/wiki/Elizabeth_Olsen" },
+    { "nombre": "Paul Bettany", "wiki": "https://es.wikipedia.org/wiki/Paul_Bettany" }],
   "descripcion": "Wanda Maximoff y Vision viven vidas suburbanas idealizadas, pero pronto sospechan que todo no es lo que parece.",
   "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/R2oA59hYN_Y?si=MGDr8njLnbxXSlZ3" 
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
@@ -38,7 +40,9 @@ const SERIES = [{
   "temporadas": 4,
   "episodios": [18, 15, 8, 8],
   "genero": "Documental, Deporte",
-  "actores": ["Ryan Reynolds", "Rob McElhenney"],
+  "actores": [
+    { "nombre": "Ryan Reynolds", "wiki": "https://es.wikipedia.org/wiki/Ryan_Reynolds" },
+    { "nombre": "Rob McElhenney", "wiki": "https://es.wikipedia.org/wiki/Rob_McElhenney" }],
   "descripcion": "Documental que sigue a Ryan Reynolds y Rob McElhenney mientras compran y dirigen el histórico club de fútbol galés Wrexham AFC.",
   "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/SMnnVR2GaWM?si=LoV7_YpreCPAxX2r" 
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
@@ -53,7 +57,10 @@ const SERIES = [{
   "temporadas": 1,
   "episodios": [1],
   "genero": "Documental, Deporte",
-  "actores": ["Lionel Messi", "Selección Argentina", "Lionel Scaloni"],
+  "actores": [
+    { "nombre": "Lionel Messi", "wiki": "https://es.wikipedia.org/wiki/Lionel_Messi" },
+    { "nombre": "Selección Argentina", "wiki": "https://es.wikipedia.org/wiki/Selecci%C3%B3n_de_f%C3%BAtbol_de_Argentina" },
+    { "nombre": "Lionel Scaloni", "wiki": "https://es.wikipedia.org/wiki/Lionel_Scaloni" }],
   "descripcion": "Una mirada íntima al equipo argentino de fútbol un año después de su histórica victoria en la Copa Mundial 2022.",
   "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/bERxUcV5UbA?si=kvdS21YoeZh6LNb8" 
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
@@ -68,7 +75,10 @@ const SERIES = [{
   "temporadas": 3,
   "episodios": [13, 13, 13],
   "genero": "Acción, Crimen, Drama",
-  "actores": ["Charlie Cox", "Deborah Ann Woll", "Elden Henson"],
+  "actores": [
+    { "nombre": "Charlie Cox", "wiki": "https://es.wikipedia.org/wiki/Charlie_Cox" },
+    { "nombre": "Deborah Ann Woll", "wiki": "https://es.wikipedia.org/wiki/Deborah_Ann_Woll" },
+    { "nombre": "Elden Henson", "wiki": "https://es.wikipedia.org/wiki/Elden_Henson" }],
   "descripcion": "Matt Murdock, un abogado ciego, usa sus sentidos mejorados para luchar contra el crimen como el vigilante Daredevil en Hell's Kitchen.",
   "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/cDUKA6Tqiw8?si=PDboZvV92LF538WP" 
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
@@ -83,7 +93,8 @@ const SERIES = [{
   "temporadas": 1,
   "episodios": [4],
   "genero": "Documental, Deporte, Biografía",
-  "actores": ["Diego Maradona"],
+  "actores": [
+    { "nombre": "Diego Maradona", "wiki": "https://es.wikipedia.org/wiki/Diego_Maradona" }],
   "descripcion": "Una exploración profunda de la vida y el legado de Diego Maradona, más allá de su figura como futbolista.",
   "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/VdwcK8mwjDM?si=f0NFzhvUsXciwh3D" 
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
@@ -98,7 +109,8 @@ const SERIES = [{
   "temporadas": 1,
   "episodios": [4],
   "genero": "Documental, Deporte, Biografía",
-  "actores": ["Sergio 'Kun' Agüero"],
+  "actores": [
+    { "nombre": "Sergio 'Kun' Agüero", "wiki": "https://es.wikipedia.org/wiki/Kun_Ag%C3%BCero" }],
   "descripcion": "Un documental que sigue la trayectoria y los momentos clave en la carrera del legendario futbolista Sergio 'Kun' Agüero.",
   "iframe": `<iframe width="560" height="315" src="https://www.youtube.com/embed/P0pVv9mSLbc?si=97kl8UomXYyI93KU" 
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 

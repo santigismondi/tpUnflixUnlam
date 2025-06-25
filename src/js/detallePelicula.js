@@ -35,3 +35,20 @@ if (pelicula) {
     console.warn("Película no encontrada");
 }
 
+//Agrega nombres de actores con su link de biografia
+const actoresContainer = document.getElementById("actores-pelicula");
+actoresContainer.innerHTML = ""; // Limpiar
+
+pelicula.actores.forEach((actor, index) => {
+  const link = document.createElement("a");
+  link.href = actor.wiki;
+  link.textContent = actor.nombre;
+  link.target = "_blank";
+
+  actoresContainer.appendChild(link);
+
+  // Agregar coma si no es el último
+  if (index < pelicula.actores.length - 1) {
+    actoresContainer.appendChild(document.createTextNode(", "));
+  }
+});
