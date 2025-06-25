@@ -123,6 +123,18 @@ button{
     background-color: #480000;
     transition-duration: 0.3s;
 }
+.botonCerrarSesion{
+    background-color: #945e00;
+    border:#ffffff solid 1px;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 0 40px 0 40px;
+    cursor: pointer;
+}
+.botonCerrarSesion:hover{
+    background-color: #482b00;
+    transition-duration: 0.3s;
+}
 .mesajeError{
     display: flex;
     justify-content: center;

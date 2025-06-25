@@ -26,7 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
+    if (btnCerrarSesion) {
+        btnCerrarSesion.addEventListener('click', () => {
+            sessionStorage.removeItem('usuarioLogueado');       
+            window.location.href = '../../index.html'; 
+        });
+    }
     if (btnGuardarCambios) {
         btnGuardarCambios.addEventListener('click', (event) => {
             event.preventDefault();
