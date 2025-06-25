@@ -13,7 +13,7 @@
     align-items: center;
     padding: 0% 3% 0% 3%;
 }
-.tituloPelicula, .tituloSerie {
+.tituloPelicula, .tituloSerie, .tituloFavoritos {
     font-weight: 400;
     font-size: 3em;
     color: #fff;
