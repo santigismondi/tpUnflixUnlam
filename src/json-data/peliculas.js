@@ -135,6 +135,6 @@ const PELICULAS = [
         <a href="https://www.youtube.com/watch?v=FA1sR2SZAlY&ab_channel=CONMEBOL" target="_blank">
         <input type="button" value="Comenzar" class="infoButton">
         </a>`,
-    "portada": "../recursos/imagenes/portadasPeliculas/laGranFinal.webp"
+    "portada": "../recursos/imagenes/portadasSeries/laGranFinal.webp"
   }
 ]
