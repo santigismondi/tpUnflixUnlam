@@ -11,7 +11,8 @@ const PELICULAS = [
                 title="Last Action Hero Trailer" frameborder="0" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=ShBw43KJoLk" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+    "portada": "../recursos/imagenes/portadasPeliculas/elUltimoGranHeroe.webp"
   },
   {
     "tipo": "pelicula",
@@ -27,7 +28,8 @@ const PELICULAS = [
                 title="Lightyear Trailer" frameborder="0" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=BwZs3H_UN3k" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+    "portada": "../recursos/imagenes/portadasPeliculas/buzz.webp"  
   },
   {
     "tipo": "pelicula",
@@ -44,7 +46,8 @@ const PELICULAS = [
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=GpP3kd1a0Yk&ab_channel=MarvelLatinoam%C3%A9ricaOficial" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+    "portada": "../recursos/imagenes/portadasPeliculas/capAmerica.webp"
   },
   {
     "tipo": "pelicula",
@@ -60,7 +63,8 @@ const PELICULAS = [
                 title="First Avenger Trailer" frameborder="0" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=JerVrbLldXw" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+    "portada": "../recursos/imagenes/portadasPeliculas/capAmericaVeng.webp"
   },
   {
     "tipo": "pelicula",
@@ -77,7 +81,8 @@ const PELICULAS = [
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=W_H7_tDHFE8&ab_channel=RottenTomatoesClassicTrailers" target="_blank">
                     <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+    "portada": "../recursos/imagenes/portadasPeliculas/cars.webp"
   },
   {
     "tipo": "pelicula",
@@ -93,7 +98,8 @@ const PELICULAS = [
                 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=dKrVegVI0Us&ab_channel=MarvelEntertainment" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+    "portada": "../recursos/imagenes/portadasPeliculas/civilWar.webp"
   },
   {
     "tipo": "pelicula",
@@ -110,7 +116,8 @@ const PELICULAS = [
         gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <a href="https://www.youtube.com/watch?v=uzkkh-1A_kY&ab_channel=XDP1026DX" target="_blank">
         <input type="button" value="Comenzar" class="infoButton">
-        </a>`
+        </a>`,
+    "portada": "../recursos/imagenes/portadasPeliculas/monstersInc.webp"
   },
   {
     "tipo": "pelicula",
@@ -127,6 +134,7 @@ const PELICULAS = [
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <a href="https://www.youtube.com/watch?v=FA1sR2SZAlY&ab_channel=CONMEBOL" target="_blank">
         <input type="button" value="Comenzar" class="infoButton">
-        </a>`
+        </a>`,
+    "portada": "../recursos/imagenes/portadasPeliculas/laGranFinal.webp"
   }
 ]

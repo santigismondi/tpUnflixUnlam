@@ -15,7 +15,8 @@ const SERIES = [{
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=KcBStos46EM&ab_channel=MarvelLatinoam%C3%A9ricaOficial" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+  "portada":"../recursos/imagenes/portadasSeries/loki.webp"
 },
 {
   "tipo": "serie",
@@ -32,7 +33,8 @@ const SERIES = [{
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=R2oA59hYN_Y&ab_channel=MarvelLatinoam%C3%A9ricaOficial" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+  "portada":"../recursos/imagenes/portadasSeries/wandaVision.webp"
 },
 {
   "tipo": "serie",
@@ -49,7 +51,8 @@ const SERIES = [{
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=SMnnVR2GaWM&ab_channel=Disney%2BEspa%C3%B1a" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+  "portada":"../recursos/imagenes/portadasSeries/wrexham.webp"
 },
 {
   "tipo": "serie",
@@ -67,7 +70,8 @@ const SERIES = [{
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=bERxUcV5UbA&ab_channel=Skytrix" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+  "portada":"../recursos/imagenes/portadasSeries/campeones.webp"
 },
 {
   "tipo": "serie",
@@ -85,7 +89,8 @@ const SERIES = [{
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=cDUKA6Tqiw8&ab_channel=NetflixEspa%C3%B1a" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+  "portada":"../recursos/imagenes/portadasSeries/daredevil.webp"
 },
 {
   "tipo": "serie",
@@ -101,7 +106,8 @@ const SERIES = [{
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=VdwcK8mwjDM&ab_channel=PrimeVideoM%C3%A9xico" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+  "portada":"../recursos/imagenes/portadasSeries/diego.webp"
 },
 {
   "tipo": "serie",
@@ -117,6 +123,7 @@ const SERIES = [{
     gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <a href="https://www.youtube.com/watch?v=P0pVv9mSLbc&ab_channel=Disney%2BEspa%C3%B1a" target="_blank">
                 <input type="button" value="Comenzar" class="infoButton">
-                </a>`
+                </a>`,
+  "portada":"../recursos/imagenes/portadasSeries/kun.webp"
 }
 ];
