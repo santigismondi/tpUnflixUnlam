@@ -19,7 +19,16 @@
     color: #fff;
     text-align: center;
 }
-
+.mensaje-favoritos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
 @media (max-width: 1080px) {
     .grillaInicioPeliculas, .grillaInicioSeries{
         display: grid;

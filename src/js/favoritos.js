@@ -14,8 +14,9 @@ const todoElContenido = [...listaDePeliculas, ...listaDeSeries];
  */
 document.addEventListener('DOMContentLoaded', () => {
     const grillaFavoritosContainer = document.getElementById('contenedorGrillaFavoritos');
+    const mensajeFavoritosContainer = document.getElementById('contenedorMensaje');
     if (favoritosDelUsuario.length === 0) {
-        grillaFavoritosContainer.innerHTML = '<p class="mensaje-favoritos">Aún no tienes ninguna película o serie en tu lista de favoritos. ¡Explora y añade algunas!</p>';
+        mensajeFavoritosContainer.innerHTML = '<p class="mensaje-favoritos">Aún no tienes ninguna película o serie en tu lista de favoritos. ¡Explora y añade algunas!</p>';
         return;
     }else{
         favoritosDelUsuario.forEach(tituloFavorito => {
