@@ -171,7 +171,8 @@ function esContrasenaValida(pass) {
             contrasena: contrasenaInput.value.trim(),
             nombre: nombreInput.value.trim(),
             apellido: apellidoInput.value.trim(),
-            email: emailInput.value.trim()
+            email: emailInput.value.trim(),
+            favoritos: []
         };
         
         const tarjetaSeleccionada = document.querySelector('input[name="pago"][value="tarjeta"]').checked;
