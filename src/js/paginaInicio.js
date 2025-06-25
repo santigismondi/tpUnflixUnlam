@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     botonCorazonFav.forEach(boton => {
         const nombrePeliSerie = boton.getAttribute('data-titulo-item');
         usuarioLogueadoJSON = sessionStorage.getItem('usuarioLogueado');            
-        const usuarioLogueado = JSON.parse(usuarioLogueadoJSON);
+        let usuarioLogueado = JSON.parse(usuarioLogueadoJSON);
         let usuariosJSON = localStorage.getItem('usuarios');
         let usuarios = usuariosJSON ? JSON.parse(usuariosJSON) : [];
         if (!usuarioLogueado.favoritos) {
@@ -95,9 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             actualizarCorazonVisual(boton, false);
         }
         boton.addEventListener('click', () => {                
-            if (boton.classList.contains('fa-regular')) {
-                boton.classList.remove('fa-regular');
-                boton.classList.add('fa-solid');
+            if (usuarioLogueado.favoritos[peliculaSerieIndex] != nombrePeliSerie) {
                 usuarioLogueado.favoritos.push(nombrePeliSerie);
                 sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
                 if (usuarioIndex !== -1) {
@@ -107,22 +105,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log("Array 'usuarios' general actualizado en localStorage.");
                 }
                 console.log(nombrePeliSerie);
-            } else {
-                boton.classList.remove('fa-solid');
-                boton.classList.add('fa-regular');
-                usuarioLogueado.favoritos.splice(peliculaSerieIndex, 1);
-                sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
-                if (usuarioIndex !== -1) {
-                    usuarios[usuarioIndex] = usuarioLogueado; 
-                    localStorage.setItem('usuarios', JSON.stringify(usuarios));
-                    console.log("Array 'usuarios' general actualizado en localStorage.");
+            } else if(usuarioLogueado.favoritos[peliculaSerieIndex] === nombrePeliSerie){
+                    usuarioLogueado.favoritos.splice(peliculaSerieIndex, 1);
+                    sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
+                    if (usuarioIndex !== -1) {
+                        usuarios[usuarioIndex] = usuarioLogueado; 
+                        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+                        console.log("Array 'usuarios' general actualizado en localStorage.");
+                    }
+                    actualizarCorazonVisual(boton, false);
+                    console.log('Clase cambiada a fa-regular');
                 }
-                actualizarCorazonVisual(boton, false);
-                console.log('Clase cambiada a fa-regular');
-            }
-
+            });
         });
-    });
 });
 
 function actualizarCorazonVisual(btnCorazon, isFavorite) {

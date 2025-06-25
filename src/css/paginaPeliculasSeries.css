@@ -13,22 +13,13 @@
     align-items: center;
     padding: 0% 3% 0% 3%;
 }
-.tituloPelicula, .tituloSerie, .tituloFavoritos {
+.tituloPelicula, .tituloSerie{
     font-weight: 400;
     font-size: 3em;
     color: #fff;
     text-align: center;
 }
-.mensaje-favoritos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-size: 1.5em;
-    color: #fff;
-    text-align: center;
-    margin-top: 20px;
-}
+
 @media (max-width: 1080px) {
     .grillaInicioPeliculas, .grillaInicioSeries{
         display: grid;
