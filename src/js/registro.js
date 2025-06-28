@@ -177,7 +177,7 @@ function esContrasenaValida(pass) {
         
         const tarjetaSeleccionada = document.querySelector('input[name="pago"][value="tarjeta"]').checked;
         const cuponSeleccionado = document.querySelector('input[name="pago"][value="cupon"]').checked;
-        const tipoCupon = "";
+        let tipoCupon = "";
         if (cuponSeleccionado) {
             if(document.querySelector('input[name="pago_facil"]').checked && document.querySelector('input[name="rapipago"]').checked){
                 mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un solo tipo de cupón');

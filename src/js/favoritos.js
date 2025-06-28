@@ -25,19 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if(itemCompleto.tipo === 'pelicula'){
                 grillaFavoritosContainer.innerHTML += `
                     <section class="boxContenido" data-tipo="${itemCompleto.tipo}">
-                    <i class="fa-solid fa-heart" data-titulo-item="${itemCompleto.titulo}"></i>
-                    <p id="nombrePeliSerie" name="${itemCompleto.tipo}" class="parrafoNombrePeliSerie">${itemCompleto.titulo}</p>
-                    <a class="etiquetaVinculoGrilla" href="../html/detallePelicula.html?titulo=${encodeURIComponent(itemCompleto.titulo)}">
-                        <img src="${itemCompleto.portada}" alt="${itemCompleto.titulo}" class="portada">
-                    </a>`
+                        <i class="fa-solid fa-heart" data-titulo-item="${itemCompleto.titulo}"></i>
+                        <p id="nombrePeliSerie" name="${itemCompleto.tipo}" class="parrafoNombrePeliSerie">${itemCompleto.titulo}</p>
+                        <a class="etiquetaVinculoGrilla" href="../html/detallePelicula.html?titulo=${encodeURIComponent(itemCompleto.titulo)}">
+                            <img src="${itemCompleto.portada}" alt="${itemCompleto.titulo}" class="portada">
+                        </a>
+                    </section>`;
             }else if(itemCompleto.tipo === 'serie'){
                 grillaFavoritosContainer.innerHTML += `
                     <section class="boxContenido" data-tipo="${itemCompleto.tipo}">
-                    <i class="fa-solid fa-heart" data-titulo-item="${itemCompleto.titulo}"></i>
-                    <p id="nombrePeliSerie" name="${itemCompleto.tipo}" class="parrafoNombrePeliSerie">${itemCompleto.titulo}</p>
-                    <a class="etiquetaVinculoGrilla" href="../html/detalleSerie.html?titulo=${encodeURIComponent(itemCompleto.titulo)}">
-                        <img src="${itemCompleto.portada}" alt="${itemCompleto.titulo}" class="portada">
-                    </a>`
+                        <i class="fa-solid fa-heart" data-titulo-item="${itemCompleto.titulo}"></i>
+                        <p id="nombrePeliSerie" name="${itemCompleto.tipo}" class="parrafoNombrePeliSerie">${itemCompleto.titulo}</p>
+                        <a class="etiquetaVinculoGrilla" href="../html/detalleSerie.html?titulo=${encodeURIComponent(itemCompleto.titulo)}">
+                            <img src="${itemCompleto.portada}" alt="${itemCompleto.titulo}" class="portada">
+                        </a>
+                    </section>`;
             }
         });
     }

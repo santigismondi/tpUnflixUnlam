@@ -59,6 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             
             let nuevoTipoPago = null;
+            if(usuarioLogueado.usuarioLogueado.numeroTarjeta && usuarioLogueado.usuarioLogueado.codigoSeguridad){
+                usuarioLogueado.numeroTarjeta = null;
+                usuarioLogueado.codigoSeguridad = null;
+            }
+            if(usuarioLogueado.tipoCupon){
+                usuarioLogueado.tipoCupon = null;
+            }            
             radioButtonsPago.forEach(radio => {
                 if (radio.checked) {
                     nuevoTipoPago = radio.value;
@@ -74,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     mostrarError(document.querySelector('input[name="pago"][value="tarjeta"]'), 'Debe completar los campos de tarjeta');
                     error = true;
                 }
-                const numero = numeroTarjeta.value.trim();
+                const numero = numeroTarjeta.trim();
                 if (!/^\d{16}$/.test(numero)) {
                     mostrarError(numero, 'Debe tener 16 dígitos numéricos');
                     error = true;
@@ -101,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }                
                 }
 
-                const cod = cvvTarjeta.value.trim();
+                const cod = cvvTarjeta.trim();
                 if (!/^\d{3}$/.test(cod) || cod === "000") {
                     mostrarError(cod, 'Código inválido');
                     error = true;
@@ -144,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 usuarios[indexUsuario] = usuarioLogueado;
                 localStorage.setItem('usuarios', JSON.stringify(usuarios));                
             }
-            
+
             mensaje(error);
         });
     }    
