@@ -126,13 +126,13 @@ function esContrasenaValida(pass) {
                 const suma = digitos.slice(0, -1).reduce((a, b) => a + b, 0);
                 const ultimo = digitos[15];
 
-                            function esPar(n) {
-                if (n === 0 || n === 2 || n === 4 || n === 6 || n === 8) {
-                    return true;
-                } else {
-                    return false;
+                function esPar(n) {
+                    if (n === 0 || n === 2 || n === 4 || n === 6 || n === 8) {
+                        return true;
+                    } else {
+                        return false;
+                    }
                 }
-            }
             
             const sumaUltimoDigito = Number(String(suma).slice(-1));
             const sumaEsPar = esPar(sumaUltimoDigito);
@@ -153,8 +153,26 @@ function esContrasenaValida(pass) {
             }
         }
         const cuponSeleccionado = document.querySelector('input[name="pago"][value="cupon"]').checked;
+        if (cuponSeleccionado) {
+            if(document.querySelector('input[name="pago_facil"]').checked && document.querySelector('input[name="rapipago"]').checked){
+                mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un solo tipo de cupón');
+                esValido = false;
+            }            
+            if(document.querySelector('input[name="pago_facil"]').checked){
+                const tipoCupon = "pago_facil";
+            }else if(document.querySelector('input[name="rapipago"]').checked){
+                const tipoCupon = "rapipago";
+            }else{
+                mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un tipo de cupón');
+                esValido = false;
+            }
+        }
         const transferenciaSeleccionada = document.querySelector('input[name="pago"][value="transferencia"]').checked;
 
+        if (!tarjetaSeleccionada && !cuponSeleccionado && !transferenciaSeleccionada) {
+            alert('Debe seleccionar un método de pago');
+            esValido = false;
+        }
         botonConfirmar.disabled = !esValido;
         return esValido;
     };
@@ -177,6 +195,14 @@ function esContrasenaValida(pass) {
         
         const tarjetaSeleccionada = document.querySelector('input[name="pago"][value="tarjeta"]').checked;
         const cuponSeleccionado = document.querySelector('input[name="pago"][value="cupon"]').checked;
+        const tipoCupon = "";
+        if (cuponSeleccionado) {
+            if(document.querySelector('input[name="pago_facil"]').checked){
+                tipoCupon = "pago_facil";
+            }else{
+                tipoCupon = "rapipago";
+            }
+        }
         const transferenciaSeleccionada = document.querySelector('input[name="pago"][value="transferencia"]').checked;
 
         if(tarjetaSeleccionada){            
@@ -185,6 +211,7 @@ function esContrasenaValida(pass) {
             nuevoUsuario.codigoSeguridad = codigoSeguridadInput.value.trim();
         }else if(cuponSeleccionado){
             nuevoUsuario.tipoPago = 'cupon';
+            nuevoUsuario.tipoCupon = tipoCupon;
         }else if(transferenciaSeleccionada){
             nuevoUsuario.tipoPago = 'transferencia';
         }

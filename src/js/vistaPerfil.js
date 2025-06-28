@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const idFormNewContra = document.getElementById('idFormNewContra');
     const idFormConfirmContra = document.getElementById('idFormConfirmContra');
     const radioButtonsPago = document.querySelectorAll('input[name="pago"]');
-    //const btnGuardarCambios = document.getElementById('btnGuardarCambios');
-    var error = false;
+    //const btnGuardarCambios = document.getElementById('btnGuardarCambios');    
 
     if (usuarioLogueadoJSON) {
         const usuarioLogueado = JSON.parse(usuarioLogueadoJSON);
@@ -25,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 radio.checked = true;
             }
         });
+        if(tipoPagoUsuario === 'cupon') {
+            const tipoCupon = usuarioLogueado.tipoCupon;
+            const checkCuponPago = document.querySelector(`input[name="pagoCupon"][value="${tipoCupon}"]`);
+            if (checkCuponPago) {
+                checkCuponPago.checked = true;
+            }
+        }
     }
     if (btnCerrarSesion) {
         btnCerrarSesion.addEventListener('click', () => {
@@ -35,17 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnGuardarCambios) {
         btnGuardarCambios.addEventListener('click', (event) => {
             event.preventDefault();
-            
+            let error = false;
             const nuevaContrasena = idFormNewContra.value.trim();
             const confirmarContrasena = idFormConfirmContra.value.trim();
 
             if (nuevaContrasena) {
                 if (nuevaContrasena !== confirmarContrasena) {                    
-                    var error = true;
+                    error = true;
                     return mensaje(error);
                 }
                 if (!contraseñaRegex.test(nuevaContrasena)) {                    
-                    var error = true;
+                    error = true;
                     return mensaje(error);
                 }                
                 usuarioLogueado.contrasena = nuevaContrasena;
@@ -63,8 +69,64 @@ document.addEventListener('DOMContentLoaded', () => {
             if (nuevoTipoPago === 'tarjeta') {
                 let numeroTarjeta = document.querySelector('input[name="pagoTarjeta"][placeholder="XXXX XXXX XXXX XXXX"]').value;
                 let cvvTarjeta = document.querySelector('input[name="pagoTarjeta"][placeholder="CVV"]').value;
-                usuarioLogueado.numeroTarjeta = numeroTarjeta;
-                usuarioLogueado.codigoSeguridad = cvvTarjeta;
+
+                if(!numeroTarjeta || !cvvTarjeta) {
+                    mostrarError(document.querySelector('input[name="pago"][value="tarjeta"]'), 'Debe completar los campos de tarjeta');
+                    error = true;
+                }
+                const numero = numeroTarjeta.value.trim();
+                if (!/^\d{16}$/.test(numero)) {
+                    mostrarError(numero, 'Debe tener 16 dígitos numéricos');
+                    error = true;
+                } else {
+                    const digitos = numero.split('').map(Number);
+                    const suma = digitos.slice(0, -1).reduce((a, b) => a + b, 0);
+                    const ultimo = digitos[15];
+
+                    function esPar(n) {
+                        if (n === 0 || n === 2 || n === 4 || n === 6 || n === 8) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+                
+                    const sumaUltimoDigito = Number(String(suma).slice(-1));
+                    const sumaEsPar = esPar(sumaUltimoDigito);
+                    const ultimoEsPar = esPar(ultimo);
+                    
+                    if ((sumaEsPar && ultimoEsPar) || (!sumaEsPar && !ultimoEsPar)) {
+                        mostrarError(numero, 'El último dígito debe ser par si la suma es impar, e impar si la suma es par');
+                        error = true;
+                    }                
+                }
+
+                const cod = cvvTarjeta.value.trim();
+                if (!/^\d{3}$/.test(cod) || cod === "000") {
+                    mostrarError(cod, 'Código inválido');
+                    error = true;
+                }
+                if (!error) {
+                    usuarioLogueado.numeroTarjeta = numeroTarjeta;
+                    usuarioLogueado.codigoSeguridad = cvvTarjeta;
+                }
+            }
+
+            if (nuevoTipoPago === 'cupon') {
+                if(document.querySelector('input[name="pago_facil"]').checked && document.querySelector('input[name="rapipago"]').checked){
+                    mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un solo tipo de cupón');
+                    error = false;
+                }
+                if(document.querySelector('input[name="pago_facil"]').checked){
+                    const nuevoTipoCupon = "pago_facil";
+                    usuarioLogueado.tipoCupon = nuevoTipoCupon;
+                }else if(document.querySelector('input[name="rapipago"]').checked){
+                    const nuevoTipoCupon = "rapipago";
+                    usuarioLogueado.tipoCupon = nuevoTipoCupon;
+                }else{
+                    mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un tipo de cupón');
+                    error = true;
+                }
             }
 
             //SGI - Verificar si es necesario
@@ -82,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 usuarios[indexUsuario] = usuarioLogueado;
                 localStorage.setItem('usuarios', JSON.stringify(usuarios));                
             }
-
+            
             mensaje(error);
         });
     }    
