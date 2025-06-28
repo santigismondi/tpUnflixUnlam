@@ -181,7 +181,7 @@ function esContrasenaValida(pass) {
         if (cuponSeleccionado) {
             if(document.querySelector('input[name="pago_facil"]').checked && document.querySelector('input[name="rapipago"]').checked){
                 mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un solo tipo de cupón');
-                esValido = false;
+                return;
             }            
             if(document.querySelector('input[name="pago_facil"]').checked){
                 tipoCupon = "pago_facil";
@@ -189,16 +189,16 @@ function esContrasenaValida(pass) {
                 tipoCupon = "rapipago";
             }else{
                 mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un tipo de cupón');
-                esValido = false;
+                return;
             }
         }
         const transferenciaSeleccionada = document.querySelector('input[name="pago"][value="transferencia"]').checked;
 
         if (!tarjetaSeleccionada && !cuponSeleccionado && !transferenciaSeleccionada) {
             alert('Debe seleccionar un método de pago');
-            esValido = false;
+            return;
         }
-        
+
         if(tarjetaSeleccionada){            
             nuevoUsuario.tipoPago = 'tarjeta';
             nuevoUsuario.numeroTarjeta = numeroTarjetaInput.value.trim();
