@@ -1,3 +1,7 @@
+const listaDePeliculas = PELICULAS;
+const listaDeSeries = SERIES;
+const todoElContenido = [...listaDePeliculas, ...listaDeSeries];
+
 document.addEventListener('DOMContentLoaded', () => {
     const botonCorazonFav = document.querySelectorAll('.fa-heart');
 
@@ -22,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         boton.addEventListener('click', () => {
             const nombrePeliSerieClickeada = boton.getAttribute('data-titulo-item');
             let elementoSeleccionado = null;
-            arrayPeliculasYseries.filter(item => {
+            todoElContenido.filter(item => {
                 if (item.titulo === nombrePeliSerieClickeada) {
                     elementoSeleccionado = item;
                 }
