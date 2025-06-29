@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
             arrayPeliculasYseries.filter(item => {
                 if (item.titulo === nombrePeliSerieClickeada) {
                     elementoSeleccionado = item;
-                    console.log(`Encontrado: ${item.titulo}`);
                 }
             }); 
             usuarioLogueadoAuxiliarJSON = sessionStorage.getItem('usuarioLogueado');           
@@ -46,9 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     usuarios[usuarioIndex] = usuarioLogueadoAuxiliar;
                     localStorage.setItem('usuarios', JSON.stringify(usuarios));
                     actualizarCorazonVisual(boton, true);
-                    console.log("Array 'usuarios' general actualizado en localStorage.");
                 }
-                console.log(elementoSeleccionado);
             } else {
                     usuarioLogueadoAuxiliar.favoritos.splice(indiceFavoritoAuxiliar, 1);
                     sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueadoAuxiliar));
@@ -58,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         console.log("Array 'usuarios' general actualizado en localStorage.");
                     }
                     actualizarCorazonVisual(boton, false);
-                    console.log('Clase cambiada a fa-regular');
                 }
             });
         });

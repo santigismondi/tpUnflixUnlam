@@ -151,14 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 usuarios[indexUsuario] = usuarioLogueado;
                 localStorage.setItem('usuarios', JSON.stringify(usuarios));                
             }
-
             mensaje(error);
         });
     }    
     
     if (btnCancelarSuscripcion) {
         btnCancelarSuscripcion.addEventListener('click', () => {
-
             if (usuarioLogueadoJSON) {
                 const usuarioLogueado = JSON.parse(usuarioLogueadoJSON);
                 let usuariosRegistradosJSON = localStorage.getItem('usuarios');

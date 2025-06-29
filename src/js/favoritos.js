@@ -4,7 +4,7 @@ const favoritosDelUsuario = usuarioLogueado.favoritos;
 const listaDePeliculas = PELICULAS;
 const listaDeSeries = SERIES;
 const todoElContenido = [...listaDePeliculas, ...listaDeSeries];
-/**
+/** PLANTILLA HTML
  *         <section class="boxContenido" data-tipo="">
             <p id="nombrePeliSerie" name="" class="parrafoNombrePeliSerie"></p>
             <a class="etiquetaVinculoGrilla" href="../html/detallePelicula.html?titulo=">
@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
             todoElContenido.filter(item => {
                 if (item.titulo === nombrePeliSerieClickeada) {
                     elementoSeleccionado = item;
-                    console.log(`Encontrado: ${item.titulo}`);
                 }
             }); 
             usuarioLogueadoAuxiliarJSON = sessionStorage.getItem('usuarioLogueado');           
@@ -91,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     usuarios[usuarioIndex] = usuarioLogueadoAuxiliar;
                     localStorage.setItem('usuarios', JSON.stringify(usuarios));
                     actualizarCorazonVisual(boton, true);
-                    console.log("Array 'usuarios' general actualizado en localStorage.");
                 }
                 console.log(elementoSeleccionado);
             } else {
@@ -99,13 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueadoAuxiliar));
                     if (usuarioIndex !== -1) {
                         usuarios[usuarioIndex] = usuarioLogueadoAuxiliar;
-                        localStorage.setItem('usuarios', JSON.stringify(usuarios));
-                        console.log("Array 'usuarios' general actualizado en localStorage.");
+                        localStorage.setItem('usuarios', JSON.stringify(usuarios));                       
                     }
-                    actualizarCorazonVisual(boton, false);
-                    console.log('Clase cambiada a fa-regular');
+                    actualizarCorazonVisual(boton, false);                    
                 }
-            // Refrescar la página para mostrar los cambios
+
             location.reload();
             });
         });
