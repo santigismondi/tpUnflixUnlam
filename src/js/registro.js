@@ -74,40 +74,46 @@ function esContrasenaValida(pass) {
         }
     };
 
+    function limpiarTodosLosErrores() {
+    const errores = document.querySelectorAll('.error');
+    errores.forEach(error => error.remove());
+}
+
     const validarFormulario = () => {
+        limpiarTodosLosErrores();
         let esValido = true;
 
-        limpiarError(nombreInput);
+
         if (!esSoloLetras(nombreInput.value.trim())) {
             mostrarError(nombreInput, 'Solo se permiten letras');
             esValido = false;
         }
 
-        limpiarError(apellidoInput);
+
         if (!esSoloLetras(apellidoInput.value.trim())) {
             mostrarError(apellidoInput, 'Solo se permiten letras');
             esValido = false;
         }
 
-        limpiarError(emailInput);
+
         if (!emailRegex.test(emailInput.value.trim())) {
             mostrarError(emailInput, 'Email inválido');
             esValido = false;
         }
 
-        limpiarError(nombreUsuarioInput);
+
         if (!esLetrasYNumeros(nombreUsuarioInput.value.trim())) {
             mostrarError(nombreUsuarioInput, 'Solo letras y números');
             esValido = false;
         }
 
-        limpiarError(contrasenaInput);
+
         if (!esContrasenaValida(contrasenaInput.value.trim())) {
             mostrarError(contrasenaInput, 'Debe tener mínimo 8 caracteres, 2 letras, 2 números y 2 símbolos');
             esValido = false;
         }
 
-        limpiarError(repetirContrasenaInput);
+
         if (repetirContrasenaInput.value.trim() !== contrasenaInput.value.trim()) {
             mostrarError(repetirContrasenaInput, 'Las contraseñas no coinciden');
             esValido = false;
@@ -116,7 +122,7 @@ function esContrasenaValida(pass) {
         // Validar tarjeta (solo si fue seleccionada)
         const tarjetaSeleccionada = document.querySelector('input[name="pago"][value="tarjeta"]').checked;
         if (tarjetaSeleccionada) {
-            limpiarError(numeroTarjetaInput);
+
             const numero = numeroTarjetaInput.value.trim();
             if (!/^\d{16}$/.test(numero)) {
                 mostrarError(numeroTarjetaInput, 'Debe tener 16 dígitos numéricos');
@@ -145,7 +151,7 @@ function esContrasenaValida(pass) {
             
             }
 
-            limpiarError(codigoSeguridadInput);
+
             const cod = codigoSeguridadInput.value.trim();
             if (!/^\d{3}$/.test(cod) || cod === "000") {
                 mostrarError(codigoSeguridadInput, 'Código inválido');
@@ -159,7 +165,7 @@ function esContrasenaValida(pass) {
         return esValido;
     };
 
-    formulario.addEventListener('input', validarFormulario);
+    //formulario.addEventListener('input', validarFormulario);
 
     formulario.addEventListener('submit', (e) => {
         e.preventDefault();
