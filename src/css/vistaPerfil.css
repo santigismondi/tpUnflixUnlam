@@ -142,9 +142,6 @@ button{
     padding: 1% 3% 0% 3%;
     font-size: 1.1em;
 }
-.contenedorFooter{
-    position: fixed;
-}
 
 a{
     text-decoration: none;

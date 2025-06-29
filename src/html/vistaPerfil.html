@@ -54,60 +54,62 @@
                 </li>
             </ul>
         </nav>
-    </header> 
-       <section class="contenedorTitulo">
-        <h1 class="tituloPerfil">Mi Perfil</h1>
-    </section>
-    <section class="contenedorPerfil">
-        <section class="fotoPerfil">
-            <img class="imagenPerfil" src="../recursos/imagenes/iconoPerfil.png" alt="fotoPerfi">
-            <p id="idLabelNombreUsuario" class="nombreDeUsuario">Nombre del Usuario</p>
-            <section class="botonesFormulario">
-                <button type="reset" class="botonCerrarSesion" id="btnCerrarSesion"><a class="linkCancelar" href="../../index.html">Cerrar Sesion</a></button>
-            </section>
+    </header>
+    <main class="contenedorMain">
+        <section class="contenedorTitulo">
+            <h1 class="tituloPerfil">Mi Perfil</h1>
         </section>
-        <form action="" class="formularioPerfil">
-            <section class="datosUsuario">
-                <section class="labelsUsuario">
-                    <label id="idLabelMail" class="labelForm">E-mail</label>
-                    <label id="idLabelContra" class="labelForm">Contraseña</label>
-                    <label id="idLabelNewContra" class="labelForm">Nueva Contraseña</label>
-                    <label id="idLabelConfirmContra" class="labelForm">Confirmar</label>
-                </section>
-                <section class="formularioUsuario">
-                    <label id="idEmailUser" class="labelForm">usuario1@gmail.com</label>
-                    <label id="idContraUser" class="labelForm">********</label>
-                    <input id="idFormNewContra" type="password" class="inputForm" placeholder="">
-                    <input id="idFormConfirmContra" type="password" class="inputForm" placeholder="">
+        <section class="contenedorPerfil">
+            <section class="fotoPerfil">
+                <img class="imagenPerfil" src="../recursos/imagenes/iconoPerfil.png" alt="fotoPerfi">
+                <p id="idLabelNombreUsuario" class="nombreDeUsuario">Nombre del Usuario</p>
+                <section class="botonesFormulario">
+                    <button type="reset" class="botonCerrarSesion" id="btnCerrarSesion"><a class="linkCancelar" href="../../index.html">Cerrar Sesion</a></button>
                 </section>
             </section>
-            <section class="metodoDePago">
-                <label for="" class="labelForm">
-                    <input name="pago" type="radio" class="inputFormPago" value="tarjeta">Tarjeta de credito
-                    <input name="pagoTarjeta" type="number" class="inputForm" placeholder="XXXX XXXX XXXX XXXX">
-                    <input name="pagoTarjeta" type="number" class="inputFormCVV" placeholder="CVV">
-                </label>
-                <label for="" class="labelForm">
-                    <input name="pago" type="radio" class="inputFormPago" value="cupon">Cupon de pago
-                    <section class="checkboxPagoContainer">
-                        <input name="pagoCupon" value="pago_facil" type="checkbox" class="checkboxPago" >Pago Facil
-                        <input name="pagoCupon" value="rapipago" type="checkbox" class="checkboxPago" >RapiPago
+            <form action="" class="formularioPerfil">
+                <section class="datosUsuario">
+                    <section class="labelsUsuario">
+                        <label id="idLabelMail" class="labelForm">E-mail</label>
+                        <label id="idLabelContra" class="labelForm">Contraseña</label>
+                        <label id="idLabelNewContra" class="labelForm">Nueva Contraseña</label>
+                        <label id="idLabelConfirmContra" class="labelForm">Confirmar</label>
                     </section>
-                </label>
-                <label for="" class="labelForm">
-                    <input name="pago" type="radio" class="inputFormPago" value="transferencia">Transferencia Bancaria
-                    <p class="CBU">CBU: 0000111166665555</p>
-                </label>
-            </section>
-            <section class="botonesFormulario">
-                <button type="submit" class="botonGuardar" id="btnGuardarCambios"><a class="linkGuardar" href="../html/paginaInicio.html">Guardar cambios</a></button>                
-            </section>
-            <section class="botonesFormulario">
-                <button type="reset" class="botonCancelar" id="btnCancelarSuscripcion"><a class="linkCancelar" href="../../index.html">Cancelar Subscripción</a></button>
-            </section>
-        </form>
-    </section>
-    <section id="error" class="mesajeError"></section>
+                    <section class="formularioUsuario">
+                        <label id="idEmailUser" class="labelForm">usuario1@gmail.com</label>
+                        <label id="idContraUser" class="labelForm">********</label>
+                        <input id="idFormNewContra" type="password" class="inputForm" placeholder="">
+                        <input id="idFormConfirmContra" type="password" class="inputForm" placeholder="">
+                    </section>
+                </section>
+                <section class="metodoDePago">
+                    <label for="" class="labelForm">
+                        <input name="pago" type="radio" class="inputFormPago" value="tarjeta">Tarjeta de credito
+                        <input name="pagoTarjeta" type="number" class="inputForm" placeholder="XXXX XXXX XXXX XXXX">
+                        <input name="pagoTarjeta" type="number" class="inputFormCVV" placeholder="CVV">
+                    </label>
+                    <label for="" class="labelForm">
+                        <input name="pago" type="radio" class="inputFormPago" value="cupon">Cupon de pago
+                        <section class="checkboxPagoContainer">
+                            <input name="pagoCupon" value="pago_facil" type="checkbox" class="checkboxPago" >Pago Facil
+                            <input name="pagoCupon" value="rapipago" type="checkbox" class="checkboxPago" >RapiPago
+                        </section>
+                    </label>
+                    <label for="" class="labelForm">
+                        <input name="pago" type="radio" class="inputFormPago" value="transferencia">Transferencia Bancaria
+                        <p class="CBU">CBU: 0000111166665555</p>
+                    </label>
+                </section>
+                <section class="botonesFormulario">
+                    <button type="submit" class="botonGuardar" id="btnGuardarCambios"><a class="linkGuardar" href="../html/paginaInicio.html">Guardar cambios</a></button>                
+                </section>
+                <section class="botonesFormulario">
+                    <button type="reset" class="botonCancelar" id="btnCancelarSuscripcion"><a class="linkCancelar" href="../../index.html">Cancelar Subscripción</a></button>
+                </section>
+            </form>
+        </section>
+        <section id="error" class="mesajeError"></section>
+    </main>
     <script src="../js/vistaPerfil.js"></script>
     <footer class="contenedorFooter">
         <p>Santiago Gismondi | Nicolas Gerez | Gonzalo Nasi | Agustin Sequeira</p>
