@@ -57,7 +57,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="contenedorMain">
         <section class="info">
             <div class="infoContent">
 
@@ -86,18 +86,24 @@
 
         <section class="similar">
             <h2>Similares</h2>
-            <section class="similarMovies">
-
-                <a href="../html/detallePelicula.html?titulo=Capitan America: El Primer Vengador"><img src="../recursos/imagenes/portadasPeliculas/capAmericaVeng.webp"
-                        alt=""></a>
-                <a href="../html/detallePelicula.html?titulo=Buzz Lightyear"><img src="../recursos/imagenes/portadasPeliculas/buzz.webp"
-                        alt=""></a>
-                <a href="../html/detallePelicula.html?titulo=Capitan America: Civil War"><img src="../recursos/imagenes/portadasPeliculas/civilWar.webp"
-                        alt=""></a>
-                <a href="../html/detallePelicula.html?titulo=Monsters Inc."><img
-                        src="../recursos/imagenes/portadasPeliculas/monstersInc.webp" alt=""></a>
-
-            </section>
+            <div class="carrusel-container">
+                <button class="carousel-btn prev">◀</button>
+                <section class="similarMovies">
+                    
+                    <div class="carrusel-track">
+                        <!-- <a href="../html/detallePelicula.html?titulo=Capitan America: El Primer Vengador"><img
+                                src="../recursos/imagenes/portadasPeliculas/capAmericaVeng.webp" alt=""></a>
+                        <a href="../html/detallePelicula.html?titulo=Buzz Lightyear"><img
+                                src="../recursos/imagenes/portadasPeliculas/buzz.webp" alt=""></a>
+                        <a href="../html/detallePelicula.html?titulo=Capitan America: Civil War"><img
+                                src="../recursos/imagenes/portadasPeliculas/civilWar.webp" alt=""></a>
+                        <a href="../html/detallePelicula.html?titulo=Monsters Inc."><img
+                                src="../recursos/imagenes/portadasPeliculas/monstersInc.webp" alt=""></a> -->
+                    </div>
+                    
+                </section>
+                <button class="carousel-btn next">▶</button>
+            </div>
         </section>
 
 
@@ -108,6 +114,7 @@
     </footer>
     <script src="../json-data/peliculas.js"></script>
     <script src="../js/detallePelicula.js"></script>
+    <script src="../js/carruselSimilares.js"></script>
 </body>
 
 </html>

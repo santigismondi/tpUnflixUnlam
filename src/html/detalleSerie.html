@@ -56,10 +56,10 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="contenedorMain">
         <section class="info">
             <div class="infoContent">
-                
+
 
             </div>
 
@@ -69,12 +69,12 @@
                 </div>
                 <div>
                     <strong>Temporadas: </strong><span><select name="temporadas" id="temporadas">
-                            
+
                         </select>
                     </span>
                     <strong>Capitulos: </strong>
                     <span><select name="capitulos" id="capitulos">
-                            
+
                         </select>
                     </span>
                 </div>
@@ -92,18 +92,25 @@
 
         <section class="similar">
             <h2>Similares</h2>
-            <section class="similarMovies">
+            <div class="carrusel-container">
+                <button class="carousel-btn prev">◀</button>
+                <section class="similarMovies">
+                    <div class="carrusel-track">
+                                            <!-- <a href="../html/detalleSerie.html?titulo=WandaVision"><img
+                            src="../recursos/imagenes/portadasSeries/wandaVision.webp" alt=""></a>
+                    <a href="../html/detalleSerie.html?titulo=DareDevil"><img
+                            src="../recursos/imagenes/portadasSeries/daredevil.webp" alt=""></a>
+                    <a href="../html/detalleSerie.html?titulo=Bienvenidos al Wrexham"><img
+                            src="../recursos/imagenes/portadasSeries/wrexham.webp" alt=""></a>
+                    <a href="../html/detalleSerie.html?titulo=Mas Alla de Diego"><img
+                            src="../recursos/imagenes/portadasSeries/diego.webp" alt=""></a> -->
+                    </div>
 
-                <a href="../html/detalleSerie.html?titulo=WandaVision"><img src="../recursos/imagenes/portadasSeries/wandaVision.webp"
-                        alt=""></a>
-                <a href="../html/detalleSerie.html?titulo=DareDevil"><img src="../recursos/imagenes/portadasSeries/daredevil.webp"
-                        alt=""></a>
-                <a href="../html/detalleSerie.html?titulo=Bienvenidos al Wrexham"><img src="../recursos/imagenes/portadasSeries/wrexham.webp"
-                        alt=""></a>
-                <a href="../html/detalleSerie.html?titulo=Mas Alla de Diego"><img src="../recursos/imagenes/portadasSeries/diego.webp"
-                        alt=""></a>
 
-            </section>
+                </section>
+                <button class="carousel-btn next">▶</button>
+            </div>
+
         </section>
 
 
@@ -114,6 +121,7 @@
     </footer>
     <script src="../json-data/series.js"></script>
     <script src="../js/detalleSerie.js"></script>
+    <script src="../js/carruselSimilares.js"></script>
 </body>
 
 </html>
