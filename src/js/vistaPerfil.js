@@ -121,18 +121,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (nuevoTipoPago === 'cupon') {
-                if(document.querySelector('input[name="pago_facil"]').checked && document.querySelector('input[name="rapipago"]').checked){
-                    mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un solo tipo de cupón');
+                if(document.querySelector('input[value="pago_facil"]').checked && document.querySelector('input[value="rapipago"]').checked){
+                    mostrarError(document.querySelector('input[value="pago_facil"]'), 'Debe seleccionar un solo tipo de cupón');
                     error = false;
                 }
-                if(document.querySelector('input[name="pago_facil"]').checked){
+                if(document.querySelector('input[value="pago_facil"]').checked){
                     const nuevoTipoCupon = "pago_facil";
                     usuarioLogueado.tipoCupon = nuevoTipoCupon;
-                }else if(document.querySelector('input[name="rapipago"]').checked){
+                }else if(document.querySelector('input[value="rapipago"]').checked){
                     const nuevoTipoCupon = "rapipago";
                     usuarioLogueado.tipoCupon = nuevoTipoCupon;
                 }else{
-                    mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un tipo de cupón');
+                    mostrarError(document.querySelector('input[value="pago_facil"]'), 'Debe seleccionar un tipo de cupón');
                     error = true;
                 }
             }
