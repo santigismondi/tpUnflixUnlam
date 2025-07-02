@@ -27,7 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         actualizarCorazonVisual(boton, indiceFavorito !== -1);
 
         // Evento click para agregar/quitar favorito
-        boton.addEventListener('click', () => {
+        boton.addEventListener('click', (event) => {
+                event.stopPropagation(); //que no se propague el <a>
+                event.preventDefault(); //que no se ejecute el href del <a> (ni recargue la pagina)
+
             let usuarioLogueadoAuxJSON = sessionStorage.getItem('usuarioLogueado');
             let usuarioLogueadoAux = usuarioLogueadoAuxJSON ? JSON.parse(usuarioLogueadoAuxJSON) : { favoritos: [] };
             if (!usuarioLogueadoAux.favoritos) usuarioLogueadoAux.favoritos = [];
