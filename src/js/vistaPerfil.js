@@ -62,10 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if(usuarioLogueado.usuarioLogueado.numeroTarjeta && usuarioLogueado.usuarioLogueado.codigoSeguridad){
                 usuarioLogueado.numeroTarjeta = null;
                 usuarioLogueado.codigoSeguridad = null;
+            }else{
+                usuarioLogueado.numeroTarjeta = usuarioLogueado.numeroTarjeta || null;
+                usuarioLogueado.codigoSeguridad = usuarioLogueado.codigoSeguridad || null;
             }
             if(usuarioLogueado.tipoCupon){
                 usuarioLogueado.tipoCupon = null;
-            }            
+            }else{
+                usuarioLogueado.tipoCupon = usuarioLogueado.tipoCupon || null;
+            }      
             radioButtonsPago.forEach(radio => {
                 if (radio.checked) {
                     nuevoTipoPago = radio.value;
