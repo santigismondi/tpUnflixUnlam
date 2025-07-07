@@ -3,6 +3,32 @@ button{
     font-size: 1em;
     font-weight: 300;
 }
+.elementosInicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2% 5% 2% 5%;
+    background: linear-gradient(#0e0e0e, #181818);
+    font-weight: 300;
+}
+.vista{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.labelVista{
+    font-size: 1.5em;
+    color: #ffffff;
+}
+.selectVista{
+    background-color: #181818;
+    color: #ffffff;
+    border: 1px solid #009446;;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1.1em;
+}
+
 .contenedorTitulo{
     display: flex;
     justify-content: center;
@@ -36,10 +62,19 @@ button{
 }
 .formularioPerfil{
     display: grid;
-    grid-template-areas:
+    /* grid-template-areas:
         'datos metodoDePago'
-        'botones botones';
-    gap: 10%;
+        'botones botones'; */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
+    
+}
+.labelFormPago{
+    margin-top: 20px;
+}
+.checkboxPagoContainer{
+    margin-top: 20px;
 }
 .datosUsuario{
     grid-area: 'datos';

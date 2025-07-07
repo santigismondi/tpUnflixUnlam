@@ -56,6 +56,15 @@
         </nav>
     </header>
     <main class="contenedorMain">
+        <section class="elementosInicio">
+            <section class="vista">
+                <label for="listaVistas" class="labelVista">Vista</label>
+                <select name="vista" id="listaVistas" class="selectVista">
+                    <option class="opcionesVista" value="Fila">Fila</option>
+                    <option class="opcionesVista" value="Columna">Columna</option>
+                </select>
+            </section>
+        </section>
         <section class="contenedorTitulo">
             <h1 class="tituloPerfil">Mi Perfil</h1>
         </section>
@@ -83,19 +92,19 @@
                     </section>
                 </section>
                 <section class="metodoDePago">
-                    <label for="" class="labelForm">
+                    <label for="" class="labelFormPago">
                         <input name="pago" type="radio" class="inputFormPago" value="tarjeta">Tarjeta de credito
                         <input name="pagoTarjeta" type="number" class="inputForm" placeholder="XXXX XXXX XXXX XXXX">
                         <input name="pagoTarjeta" type="number" class="inputFormCVV" placeholder="CVV">
                     </label>
-                    <label for="" class="labelForm">
+                    <label for="" class="labelFormPago">
                         <input name="pago" type="radio" class="inputFormPago" value="cupon">Cupon de pago
                         <section class="checkboxPagoContainer">
                             <input name="pagoCupon" value="pago_facil" type="checkbox" class="checkboxPago" >Pago Facil
                             <input name="pagoCupon" value="rapipago" type="checkbox" class="checkboxPago" >RapiPago
                         </section>
                     </label>
-                    <label for="" class="labelForm">
+                    <label for="" class="labelFormPago">
                         <input name="pago" type="radio" class="inputFormPago" value="transferencia">Transferencia Bancaria
                         <p class="CBU">CBU: 0000111166665555</p>
                     </label>
