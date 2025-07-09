@@ -6,7 +6,69 @@ labelEmailUsuario.innerHTML = usuarioLogueado.email;
 const labelNombreUsuario = document.getElementById('idLabelNombreUsuario');
 labelNombreUsuario.innerHTML = usuarioLogueado.nombreUsuario;
 
+let usuariosJSON = localStorage.getItem('usuarios');
+let usuarios = usuariosJSON ? JSON.parse(usuariosJSON) : [];
+let usuarioLogueadoVista = usuarioLogueado.vista || 'fila';
+
 document.addEventListener('DOMContentLoaded', () => {
+    const selectVistas = document.getElementById('listaVistas');
+    
+    actualizarVista(usuarioLogueadoVista);
+        
+    function actualizarVista(vistaAplicada) {    
+        const contenedorFormularioPerfil = document.querySelector('.formularioPerfil');
+        const contenedorPerfil = document.querySelector('.contenedorPerfil');
+        const contenedorCheckboxPagoContainer = document.querySelector('.checkboxPagoContainer');
+        const vistaSelect = selectVistas.options[selectVistas.selectedIndex].text.toLowerCase();
+        const vista = vistaAplicada || vistaSelect;
+
+        for (let i = 0; i < selectVistas.options.length; i++) {
+            if (selectVistas.options[i].value.toLowerCase() === vista) {
+                selectVistas.selectedIndex = i; // Establece la opción como seleccionada
+                break; // Una vez encontrada, salimos del bucle
+            }
+        }
+
+        if(vista === 'columna') {
+            contenedorPerfil.style.flexDirection = 'column';
+            const nuevoLayout = `
+                'datos'
+                'metodoDePago'
+                'botones'
+            `;
+            contenedorPerfil.style.alignItems = 'center';
+            contenedorFormularioPerfil.style.gridTemplateAreas = nuevoLayout;
+            contenedorFormularioPerfil.style.marginTop='40px';
+            contenedorFormularioPerfil.style.width = '80%'; 
+
+            usuarioLogueado.vista = 'columna';
+            sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
+            const usuarioIndex = usuarios.findIndex(u => u.nombreUsuario === usuarioLogueado.nombreUsuario); 
+            usuarios[usuarioIndex] = usuarioLogueado;
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        }else if(vista === 'fila') {
+            contenedorPerfil.style.flexDirection = 'row';
+            const nuevoLayout = `
+                'datos metodoDePago'
+                'botones botones'
+            `;
+            contenedorFormularioPerfil.style.gridTemplateAreas = nuevoLayout;
+            contenedorFormularioPerfil.style.padding= '2% 5% 2% 5%';
+            contenedorPerfil.style.justifyContent= 'space-evenly';
+            contenedorCheckboxPagoContainer.style.justifyContent = 'space-arround';
+            usuarioLogueado.vista = 'fila';
+            sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
+            const usuarioIndex = usuarios.findIndex(u => u.nombreUsuario === usuarioLogueado.nombreUsuario); 
+            usuarios[usuarioIndex] = usuarioLogueado;
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        }
+    }
+
+    selectVistas.addEventListener('change', () => {
+        const vistaSeleccionada = selectVistas.options[selectVistas.selectedIndex].text.toLowerCase();
+        actualizarVista(vistaSeleccionada);
+    });
+
     const usuarioLogueadoJSON = sessionStorage.getItem('usuarioLogueado');
     const contraseñaRegex = /^(?=(?:.*[A-Za-z]){2,})(?=(?:.*\d){2,})(?=(?:.*[!@#$%^&*()_+={}\[\]:;"'<>,.?~\\/-]){2,}).{8,}$/;
     const idFormNewContra = document.getElementById('idFormNewContra');
@@ -59,7 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             
             let nuevoTipoPago = null;
-            if(usuarioLogueado.usuarioLogueado.numeroTarjeta && usuarioLogueado.usuarioLogueado.codigoSeguridad){
+            
+            if(usuarioLogueado.numeroTarjeta && usuarioLogueado.codigoSeguridad){
                 usuarioLogueado.numeroTarjeta = null;
                 usuarioLogueado.codigoSeguridad = null;
             }
@@ -120,18 +183,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (nuevoTipoPago === 'cupon') {
-                if(document.querySelector('input[name="pago_facil"]').checked && document.querySelector('input[name="rapipago"]').checked){
-                    mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un solo tipo de cupón');
+                if(document.querySelector('input[value="pago_facil"]').checked && document.querySelector('input[value="rapipago"]').checked){
+                    mostrarError(document.querySelector('input[value="pago_facil"]'), 'Debe seleccionar un solo tipo de cupón');
                     error = false;
                 }
-                if(document.querySelector('input[name="pago_facil"]').checked){
+                if(document.querySelector('input[value="pago_facil"]').checked){
                     const nuevoTipoCupon = "pago_facil";
                     usuarioLogueado.tipoCupon = nuevoTipoCupon;
-                }else if(document.querySelector('input[name="rapipago"]').checked){
+                }else if(document.querySelector('input[value="rapipago"]').checked){
                     const nuevoTipoCupon = "rapipago";
                     usuarioLogueado.tipoCupon = nuevoTipoCupon;
                 }else{
-                    mostrarError(document.querySelector('input[name="pago"][value="cupon"]'), 'Debe seleccionar un tipo de cupón');
+                    mostrarError(document.querySelector('input[value="pago_facil"]'), 'Debe seleccionar un tipo de cupón');
                     error = true;
                 }
             }
@@ -200,3 +263,4 @@ function mensaje(error){
         nodoMensajeError.style.color = '#940000';
     }
 }
+

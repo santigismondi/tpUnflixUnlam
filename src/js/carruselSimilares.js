@@ -11,60 +11,58 @@ if (track && btnPrev && btnNext) {
     if (typeof peliculasJSON !== 'undefined') {
         const similares = JSON.parse(peliculasJSON);
 
-    similares.forEach(peli => {
-        const link = document.createElement('a');
-        link.href = `../html/detallePelicula.html?titulo=${encodeURIComponent(peli.titulo)}`;
-
-        // contenedor para imagen y corazon
-        const contenedor = document.createElement('div');
-        contenedor.style.position = 'relative';
-        contenedor.style.display = 'inline-block';
-
-        const img = document.createElement('img');
-        img.src = peli.portada;
-        img.alt = peli.titulo;
-
-        // icono de corazon
-        const corazon = document.createElement('i');
-        corazon.className = 'fa-regular fa-heart botonFavoritos';
-        corazon.setAttribute('data-titulo-item', peli.titulo);
-
-
-        contenedor.appendChild(img);
-        contenedor.appendChild(corazon);
-        link.appendChild(contenedor);
-        track.appendChild(link);
-});
-    }
-
-    // verificar si el JSON de series existe
-    if (typeof seriesJSON !== 'undefined') {
-        const seriesSimilares = JSON.parse(seriesJSON);
-
-        seriesSimilares.forEach(serie => {
-        const link = document.createElement('a');
-            link.href = `../html/detalleSerie.html?titulo=${encodeURIComponent(serie.titulo)}`;
-
+        similares.forEach(peli => {
             // contenedor para imagen y corazon
             const contenedor = document.createElement('div');
             contenedor.style.position = 'relative';
-            contenedor.style.display = 'inline-block';
+            //contenedor.style.display = 'inline-block';
+
+            const link = document.createElement('a');
+            link.href = `../html/detallePelicula.html?titulo=${encodeURIComponent(peli.titulo)}`;
+
+            // icono de corazon
+            const corazon = document.createElement('i');
+            corazon.className = 'fa-regular fa-heart botonFavoritos';
+            corazon.setAttribute('data-titulo-item', peli.titulo);
+
+            const img = document.createElement('img');
+            img.src = peli.portada;
+            img.alt = peli.titulo;
+
+            contenedor.appendChild(corazon);
+            contenedor.appendChild(link);
+            link.appendChild(img);
+            track.appendChild(contenedor);
+            });
+    }
+
+        // verificar si el JSON de series existe
+    if (typeof seriesJSON !== 'undefined') {
+        const similares = JSON.parse(seriesJSON);
+
+        similares.forEach(serie => {
+            // contenedor para imagen y corazon
+            const contenedor = document.createElement('div');
+            contenedor.style.position = 'relative';
+            //contenedor.style.display = 'inline-block';
+
+            const link = document.createElement('a');
+            link.href = `../html/detalleSerie.html?titulo=${encodeURIComponent(serie.titulo)}`;
+
+            // icono de corazon
+            const corazon = document.createElement('i');
+            corazon.className = 'fa-regular fa-heart botonFavoritos';
+            corazon.setAttribute('data-titulo-item', serie.titulo);
 
             const img = document.createElement('img');
             img.src = serie.portada;
             img.alt = serie.titulo;
 
-            // icono de corazon
-            const corazon = document.createElement('i');
-            corazon.className = 'fa-regular fa-heart botonFavoritos'; 
-            corazon.setAttribute('data-titulo-item', serie.titulo);
-
-
-            contenedor.appendChild(img);
             contenedor.appendChild(corazon);
-            link.appendChild(contenedor);
-            track.appendChild(link);
-        });
+            contenedor.appendChild(link);
+            link.appendChild(img);
+            track.appendChild(contenedor);
+            });
     }
  
 
