@@ -68,14 +68,12 @@ if (track && btnPrev && btnNext) {
     }
  
 
+
 // logica de movimiento tipo carrusel
-
-
-
 function moveCarousel() {
     const slideWidth = track.querySelector('a')?.offsetWidth || 0;
     const gap = 16; 
-    const offset = (slideWidth + gap) * currentIndex;
+    const offset = (slideWidth + gap) * currentIndex;  //Calcula cuanto se debe mover el slide
     track.style.transform = `translateX(-${offset}px)`;
 }
 
