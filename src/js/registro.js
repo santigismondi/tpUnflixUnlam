@@ -161,7 +161,7 @@ function esContrasenaValida(pass) {
         const cuponSeleccionado = document.querySelector('input[name="pago"][value="cupon"]').checked;
         const transferenciaSeleccionada = document.querySelector('input[name="pago"][value="transferencia"]').checked;
 
-        botonConfirmar.disabled = !esValido;
+        //botonConfirmar.disabled = !esValido;
         return esValido;
     };
 
@@ -236,4 +236,41 @@ function esContrasenaValida(pass) {
         alert('Registro exitoso! Ahora podés iniciar sesión.');
         window.location.href = '../../index.html';
     });
+
+        const radioTarjeta = document.querySelector('input[name="pago"][value="tarjeta"]');
+    const radioCupon = document.querySelector('input[name="pago"][value="cupon"]');
+    const radioTransferencia = document.querySelector('input[name="pago"][value="transferencia"]');
+    const checkboxPagoFacil = document.querySelector('input[name="pago_facil"]');
+    const checkboxRapipago = document.querySelector('input[name="rapipago"]');
+
+    function actualizarCheckboxCupon() {
+        if (radioCupon.checked) {
+            checkboxPagoFacil.disabled = false;
+            checkboxRapipago.disabled = false;
+        } else {
+            checkboxPagoFacil.checked = false;
+            checkboxRapipago.checked = false;
+            checkboxPagoFacil.disabled = true;
+            checkboxRapipago.disabled = true;
+        }
+    }
+
+    radioTarjeta.addEventListener('change', actualizarCheckboxCupon);
+    radioCupon.addEventListener('change', actualizarCheckboxCupon);
+    radioTransferencia.addEventListener('change', actualizarCheckboxCupon);
+
+    actualizarCheckboxCupon();
+
+        checkboxPagoFacil.addEventListener('change', function() {
+        if (this.checked) {
+            checkboxRapipago.checked = false;
+        }
+    });
+
+    checkboxRapipago.addEventListener('change', function() {
+        if (this.checked) {
+            checkboxPagoFacil.checked = false;
+        }
+    });
+
 });
