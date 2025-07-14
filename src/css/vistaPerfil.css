@@ -184,10 +184,13 @@ a{
 }
 
 @media (max-width: 768px) {
+    a{
+        font-size: 1.4rem;
+    }
     .contenedorPerfil{
         display: flex;
         flex-direction: column;
-        padding: 2% 5% 2% 5%;
+        padding: 2% 5% 2% 5%;   
         color: #ffffff;
         font-size: 1.5em;
         font-weight: 300;
@@ -206,6 +209,11 @@ a{
             'botones';
         gap: 5%;
     }
+    .checkboxPagoContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .contenedorTitulo{
         display: flex;
         justify-content: center;
@@ -215,6 +223,9 @@ a{
     .tituloPerfil {
         font-size: 2em;
         color: #fff;
+    }
+    .inputFormCVV{
+        width: 35%;
     }
 }
 @media (max-width: 480px) {

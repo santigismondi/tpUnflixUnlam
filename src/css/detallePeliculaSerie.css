@@ -192,10 +192,11 @@ body {
     .similarMovies {
         display: flex;
         flex-wrap: wrap;
+        padding: 1% 12% 1% 7%;
     }
 
     .similarMovies a {
-        width: 45%;
+        /* width: 45%; */
     }
 
 }
@@ -235,10 +236,11 @@ body {
     .similarMovies {
         display: flex;
         flex-wrap: wrap;
+        padding: 1% 9% 1% 5%;
     }
 
     .similarMovies a {
-        width: 45%;
+        /* width: 45%; */
     }
 }
 
