@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const numeroTarjetaInput = document.querySelector('input[name="pagoTarjeta"][placeholder="XXXX XXXX XXXX XXXX"]');
     const cvvTarjetaInput = document.querySelector('input[name="pagoTarjeta"][placeholder="CVV"]');
     const contraseñaRegex = /^(?=(?:.*[A-Za-z]){2,})(?=(?:.*\d){2,})(?=(?:.*[!@#$%^&*()_+={}\[\]:;"'<>,.?~\\/-]){2,}).{8,}$/;
+    const numeroTarjetaCargada = document.getElementById('numeroTarjetaCargada');
 
     function limpiarTodosLosErrores() {
         const errores = document.querySelectorAll('.error');
@@ -97,6 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (usuarioLogueado.tipoPago === 'cupon' && usuarioLogueado.tipoCupon) {
             if (usuarioLogueado.tipoCupon === 'pago_facil') checkboxPagoFacil.checked = true;
             if (usuarioLogueado.tipoCupon === 'rapipago') checkboxRapipago.checked = true;
+        }
+        if (usuarioLogueado.tipoPago === 'tarjeta' && usuarioLogueado.numeroTarjeta && usuarioLogueado.codigoSeguridad) {
+            let nroTarjetaActual = usuarioLogueado.numeroTarjeta;
+            nroTarjetaActual = nroTarjetaActual.substring(12, 16);
+            numeroTarjetaCargada.textContent = `Tarjeta finalizada en: **** **** **** ${nroTarjetaActual}`;
         }
     }
 
@@ -273,8 +279,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     localStorage.setItem('usuarios', JSON.stringify(usuarios));
                 }
             }
-            mensaje(error);
+            mensaje(error);            
         });
+               
     }
 });
 
