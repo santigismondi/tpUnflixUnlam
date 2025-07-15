@@ -190,7 +190,7 @@ a{
     .contenedorPerfil{
         display: flex;
         flex-direction: column;
-        padding: 2% 5% 2% 5%;   
+        /*padding: 2% 5% 2% 5%;*/  
         color: #ffffff;
         font-size: 1.5em;
         font-weight: 300;

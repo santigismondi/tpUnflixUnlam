@@ -71,8 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 'botones botones'
             `;
             contenedorFormularioPerfil.style.gridTemplateAreas = nuevoLayout;
-            contenedorFormularioPerfil.style.padding = '2% 5% 2% 5%';
+            //contenedorFormularioPerfil.style.padding = '2% 5% 2% 5%';
             contenedorPerfil.style.justifyContent = 'space-evenly';
+            contenedorFormularioPerfil.style.marginLeft = '40px'
             contenedorCheckboxPagoContainer.style.justifyContent = 'space-arround';
             usuarioLogueado.vista = 'fila';
             sessionStorage.setItem('usuarioLogueado', JSON.stringify(usuarioLogueado));
