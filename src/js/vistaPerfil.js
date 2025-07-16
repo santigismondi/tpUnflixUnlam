@@ -303,8 +303,13 @@ function mensaje(error) {
     if (!error) {
         nodoMensajeError.innerHTML = 'Cambios guardados exitosamente.';
         nodoMensajeError.style.color = '#009446';
+        nodoMensajeError.style.marginBottom = '40px';
+        setTimeout(() => {
+            window.location.reload();
+        }, 500);
     } else {
         nodoMensajeError.innerHTML = 'Hubo un error al guardar los cambios. Por favor, revisa los campos ingresados.';
         nodoMensajeError.style.color = '#940000';
+        nodoMensajeError.style.marginBottom = '40px';
     }
 }
